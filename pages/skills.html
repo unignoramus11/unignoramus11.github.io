@@ -8,9 +8,44 @@
   </head>
   <body>
     <header>
-      <h1 id="nav-title">Mohit Singh</h1>
+      <h1 id="name" class="desktop">Mohit Singh</h1>
       <nav>
-        <ul>
+        <!-- Navbar for mobile = Hamburger menu -->
+        <div class="navbar mobile">
+          <div class="nav-container mobile">
+            <!-- Hamburger menu toggle -->
+            <input class="checkbox mobile" type="checkbox" id="hamburger-menu" />
+
+            <div class="hamburger-lines mobile">
+              <span class="line line1 mobile"></span>
+              <span class="line line2 mobile"></span>
+              <span class="line line3 mobile"></span>
+            </div>
+
+            <!-- Hamburger menu items -->
+            <div class="menu-items mobile">
+              <li><a href="../main.html">About Me</a></li>
+              <li><a href="edu_bg.html">Educational Background</a></li>
+              <li>
+                <a href="achievements.html">Achievements</a>
+              </li>
+              <li><a href="skills.html" class="active">Skills</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li>
+                <label class="theme-switcher" id="theme-switcher-mobile">
+                  <input type="checkbox" id="switch-mobile" />
+                  <span class="slider round"></span>
+                </label>
+              </li>
+            </div>
+          </div>
+
+          <!-- Section name -->
+          <h1 class="section-name">Skills</h1>
+        </div>
+
+        <!-- Navbar for desktop -->
+        <ul class="desktop">
           <li><a href="../main.html">About Me</a></li>
           <li><a href="edu_bg.html">Educational Background</a></li>
           <li><a href="achievements.html">Achievements</a></li>
@@ -18,13 +53,39 @@
           <li><a href="blog.html">Blog</a></li>
           <li>
             <label class="theme-switcher">
-              <input type="checkbox" id="switch" />
+              <input type="checkbox" id="switch-desktop" />
               <span class="slider round"></span>
             </label>
           </li>
         </ul>
       </nav>
     </header>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores ab
+      consectetur dolorem fugiat quisquam earum deserunt ea aut maiores esse?
+      Quo, minus unde? Facilis autem provident eum. Obcaecati nisi voluptas
+      dignissimos totam facere inventore sequi in reprehenderit? Ratione porro
+      voluptates inventore possimus. Voluptate fugiat corrupti sunt ad a vitae
+      corporis commodi odit obcaecati. Eligendi blanditiis modi, sequi ipsa,
+      exercitationem veritatis saepe maxime velit rerum, quisquam obcaecati!
+      Fugiat qui autem impedit dignissimos illo quasi harum aspernatur quaerat
+      eos, dolorum quibusdam eum assumenda ipsa nostrum vitae nobis optio
+      recusandae! Temporibus harum eius sunt vel adipisci praesentium blanditiis
+      accusantium similique possimus. Ipsum neque nobis cupiditate, nostrum
+      adipisci reiciendis harum consectetur voluptatibus facere saepe voluptatem
+      laborum, ducimus commodi doloremque, quibusdam dignissimos enim.
+      Voluptatum cupiditate sint totam dolorum, praesentium perspiciatis
+      voluptas ipsum, ut excepturi laudantium repudiandae consequuntur nostrum
+      sequi fugiat alias. Esse est quae excepturi, ut vero explicabo minus quod
+      accusantium nam nobis facilis obcaecati assumenda iste aperiam
+      consequuntur corporis voluptate voluptas beatae. Eos, quo neque est
+      molestias cumque sit optio dolorum impedit illum omnis ut sapiente veniam
+      modi magnam porro, corrupti labore distinctio. Itaque distinctio
+      architecto sequi, velit dolorem incidunt dolore dicta non cupiditate
+      ducimus dignissimos perspiciatis vero consequuntur, iste mollitia est
+      ratione temporibus.
+    </p>
 
     <script src="../theme_script.js"></script>
   </body>

@@ -8,9 +8,42 @@
   </head>
   <body>
     <header>
-      <h1 id="nav-title">Mohit Singh</h1>
+      <h1 id="name" class="desktop">Mohit Singh</h1>
       <nav>
-        <ul>
+        <!-- Navbar for mobile = Hamburger menu -->
+        <div class="navbar mobile">
+          <div class="nav-container mobile">
+            <!-- Hamburger menu toggle -->
+            <input class="checkbox mobile" type="checkbox" id="hamburger-menu" />
+
+            <div class="hamburger-lines mobile">
+              <span class="line line1 mobile"></span>
+              <span class="line line2 mobile"></span>
+              <span class="line line3 mobile"></span>
+            </div>
+
+            <!-- Hamburger menu items -->
+            <div class="menu-items mobile">
+              <li><a href="main.html" class="active">About Me</a></li>
+              <li><a href="pages/edu_bg.html">Educational Background</a></li>
+              <li><a href="pages/achievements.html">Achievements</a></li>
+              <li><a href="pages/skills.html">Skills</a></li>
+              <li><a href="pages/blog.html">Blog</a></li>
+              <li>
+                <label class="theme-switcher" id="theme-switcher-mobile">
+                  <input type="checkbox" id="switch-mobile" />
+                  <span class="slider round"></span>
+                </label>
+              </li>
+            </div>
+          </div>
+
+          <!-- Section name -->
+          <h1 class="section-name">About Me</h1>
+        </div>
+
+        <!-- Navbar for desktop -->
+        <ul class="desktop">
           <li><a href="main.html" class="active">About Me</a></li>
           <li><a href="pages/edu_bg.html">Educational Background</a></li>
           <li><a href="pages/achievements.html">Achievements</a></li>
@@ -18,13 +51,15 @@
           <li><a href="pages/blog.html">Blog</a></li>
           <li>
             <label class="theme-switcher">
-              <input type="checkbox" id="switch" />
+              <input type="checkbox" id="switch-desktop" />
               <span class="slider round"></span>
             </label>
           </li>
         </ul>
       </nav>
     </header>
+
+    
 
     <script src="theme_script.js"></script>
   </body>

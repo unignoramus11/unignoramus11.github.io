@@ -5,10 +5,11 @@ if (!currentTheme) {
 
 if (currentTheme == "dark") {
   document.body.classList.toggle("dark-mode");
-  document.getElementById("switch").checked = true;
+  document.getElementById("switch-mobile").checked = true;
+  document.getElementById("switch-desktop").checked = true;
 }
 
-document.getElementById("switch").addEventListener("click", function () {
+document.getElementById("switch-mobile").addEventListener("click", function () {
   if (localStorage.getItem("theme") == "light") {
     localStorage.setItem("theme", "dark");
   } else {
@@ -16,3 +17,24 @@ document.getElementById("switch").addEventListener("click", function () {
   }
   document.body.classList.toggle("dark-mode");
 });
+
+document
+  .getElementById("switch-desktop")
+  .addEventListener("click", function () {
+    if (localStorage.getItem("theme") == "light") {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+    document.body.classList.toggle("dark-mode");
+  });
+
+document
+  .getElementById("hamburger-menu")
+  .addEventListener("change", function () {
+    if (this.checked) {
+      document.querySelector('.section-name').style.display = "none";
+    } else {
+      document.querySelector('.section-name').style.display = "block";
+    }
+  });
