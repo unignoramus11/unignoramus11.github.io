@@ -92,7 +92,7 @@ input:checked + .slider:before {
 }
 
 /* Styles for desktop */
-@media (min-width: 1100px) {
+@media (min-width: 1110px) {
   header {
     display: flex;
     justify-content: flex-end;
