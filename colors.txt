@@ -1,0 +1,8 @@
+--- Light Mode ---
+background: #F5F5F5
+Slider Background: #2e3e4c
+
+--- Dark Mode ---
+background: #000000
+Slider Background: #0a1529
+Theme: #E7295C
