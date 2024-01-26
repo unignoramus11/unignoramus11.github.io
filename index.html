@@ -78,30 +78,46 @@
         <div class="social-links">
           <a href="https://github.com/unignoramus11"
             ><img
-              src="images/social-media/github/white.png"
+              src="icons/social-media/github/white.png"
               alt="GitHub"
               id="github-desktop"
               class="desktop"
           /></a>
+          <a href="https://www.linkedin.com/in/unignoramus/"
+            ><img
+              src="icons/social-media/linkedIn/white.png"
+              alt="LinkedIn"
+              id="linkedin-desktop"
+              class="desktop"
+          /></a>
           <a href="https://www.facebook.com/unignoramus/"
             ><img
-              src="images/social-media/facebook/white.png"
+              src="icons/social-media/facebook/white.png"
               alt="Facebook"
               id="facebook-desktop"
               class="desktop"
           /></a>
           <a href="https://www.instagram.com/unignoramus/"
             ><img
-              src="images/social-media/instagram/white.png"
+              src="icons/social-media/instagram/white.png"
               alt="Instagram"
               id="instagram-desktop"
               class="desktop"
           /></a>
           <a href="mailto:unignoramus@gmail.com"
             ><img
-              src="images/social-media/email/white.png"
+              src="icons/social-media/email/white.png"
               alt="Email"
               id="email-desktop"
+              class="desktop"
+          /></a>
+        </div>
+        <div class="social-links">
+          <a href="https://vsco.co/unignoramus/gallery"
+            ><img
+              src="icons/camera.png"
+              alt="Photography Profile"
+              id="photography-desktop"
               class="desktop"
           /></a>
         </div>
@@ -127,7 +143,7 @@
           detective or Sci-fi novels, and tinkering.
         </p>
       </h1>
-      <div class="me mobile">
+      <div class="me mobile cut-excess">
         <img
           src="images/me-light.png"
           alt="Me"
@@ -138,30 +154,46 @@
       <div class="social-links">
         <a href="https://github.com/unignoramus11"
           ><img
-            src="images/social-media/github/white.png"
+            src="icons/social-media/github/white.png"
             alt="GitHub"
             id="github-mobile"
             class="mobile"
         /></a>
+        <a href="https://www.linkedin.com/in/unignoramus/"
+          ><img
+            src="icons/social-media/linkedIn/white.png"
+            alt="LinkedIn"
+            id="linkedin-mobile"
+            class="mobile"
+        /></a>
         <a href="https://www.facebook.com/unignoramus/"
           ><img
-            src="images/social-media/facebook/white.png"
+            src="icons/social-media/facebook/white.png"
             alt="Facebook"
             id="facebook-mobile"
             class="mobile"
         /></a>
         <a href="https://www.instagram.com/unignoramus/"
           ><img
-            src="images/social-media/instagram/white.png"
+            src="icons/social-media/instagram/white.png"
             alt="Instagram"
             id="instagram-mobile"
             class="mobile"
         /></a>
         <a href="mailto:unignoramus@gmail.com"
           ><img
-            src="images/social-media/email/white.png"
+            src="icons/social-media/email/white.png"
             alt="Email"
             id="email-mobile"
+            class="mobile"
+        /></a>
+      </div>
+      <div class="social-links">
+        <a href="https://vsco.co/unignoramus/gallery"
+          ><img
+            src="icons/camera.png"
+            alt="Photography Profile"
+            id="photography-mobile"
             class="mobile"
         /></a>
       </div>
@@ -169,7 +201,18 @@
 
     <script src="theme_script.js"></script>
     <script>
-      var greetings = ["Hello!", "Hola!", "नमस्ते!", "Hallo!", "Ciao!"];
+      var greetings = [
+        "Hello!",
+        "ஹலோ",
+        "હેલો",
+        "Hola!",
+        "नमस्ते!",
+        "Hallo!",
+        "হ্যালো",
+        "Ciao!",
+        " హలో",
+        "γεια",
+      ];
       var greetingIndex = 0;
       var greetingElementDesktop = document.getElementById("greeting-desktop");
       var greetingElementMobile = document.getElementById("greeting-mobile");
@@ -186,45 +229,53 @@
           document.getElementById("my-photo-desktop").src =
             "images/me-dark.png";
           document.getElementById("github-desktop").src =
-            "images/social-media/github/white.png";
+            "icons/social-media/github/white.png";
+          document.getElementById("linkedin-desktop").src =
+            "icons/social-media/linkedin/white.png";
           document.getElementById("facebook-desktop").src =
-            "images/social-media/facebook/white.png";
+            "icons/social-media/facebook/white.png";
           document.getElementById("instagram-desktop").src =
-            "images/social-media/instagram/white.png";
+            "icons/social-media/instagram/white.png";
           document.getElementById("email-desktop").src =
-            "images/social-media/email/white.png";
+            "icons/social-media/email/white.png";
 
           document.getElementById("my-photo-mobile").src = "images/me-dark.png";
           document.getElementById("github-mobile").src =
-            "images/social-media/github/white.png";
+            "icons/social-media/github/white.png";
+          document.getElementById("linkedin-mobile").src =
+            "icons/social-media/linkedin/white.png";
           document.getElementById("facebook-mobile").src =
-            "images/social-media/facebook/white.png";
+            "icons/social-media/facebook/white.png";
           document.getElementById("instagram-mobile").src =
-            "images/social-media/instagram/white.png";
+            "icons/social-media/instagram/white.png";
           document.getElementById("email-mobile").src =
-            "images/social-media/email/white.png";
+            "icons/social-media/email/white.png";
         } else {
           document.getElementById("my-photo-desktop").src =
             "images/me-light.png";
           document.getElementById("github-desktop").src =
-            "images/social-media/github/black.png";
+            "icons/social-media/github/black.png";
+          document.getElementById("linkedin-desktop").src =
+            "icons/social-media/linkedin/black.png";
           document.getElementById("facebook-desktop").src =
-            "images/social-media/facebook/black.png";
+            "icons/social-media/facebook/black.png";
           document.getElementById("instagram-desktop").src =
-            "images/social-media/instagram/black.png";
+            "icons/social-media/instagram/black.png";
           document.getElementById("email-desktop").src =
-            "images/social-media/email/black.png";
+            "icons/social-media/email/black.png";
 
           document.getElementById("my-photo-mobile").src =
             "images/me-light.png";
           document.getElementById("github-mobile").src =
-            "images/social-media/github/black.png";
+            "icons/social-media/github/black.png";
+          document.getElementById("linkedin-mobile").src =
+            "icons/social-media/linkedin/black.png";
           document.getElementById("facebook-mobile").src =
-            "images/social-media/facebook/black.png";
+            "icons/social-media/facebook/black.png";
           document.getElementById("instagram-mobile").src =
-            "images/social-media/instagram/black.png";
+            "icons/social-media/instagram/black.png";
           document.getElementById("email-mobile").src =
-            "images/social-media/email/black.png";
+            "icons/social-media/email/black.png";
         }
       }
 
@@ -246,7 +297,7 @@
         .getElementById("github-desktop")
         .addEventListener("mouseover", () => {
           document.getElementById("github-desktop").src =
-            "images/social-media/github/color.png";
+            "icons/social-media/github/color.png";
         });
       document
         .getElementById("github-desktop")
@@ -255,10 +306,22 @@
         });
 
       document
+        .getElementById("linkedin-desktop")
+        .addEventListener("mouseover", () => {
+          document.getElementById("linkedin-desktop").src =
+            "icons/social-media/linkedin/color.png";
+        });
+      document
+        .getElementById("linkedin-desktop")
+        .addEventListener("mouseout", () => {
+          themeChanged();
+        });
+
+      document
         .getElementById("facebook-desktop")
         .addEventListener("mouseover", () => {
           document.getElementById("facebook-desktop").src =
-            "images/social-media/facebook/color.png";
+            "icons/social-media/facebook/color.png";
         });
       document
         .getElementById("facebook-desktop")
@@ -270,7 +333,7 @@
         .getElementById("instagram-desktop")
         .addEventListener("mouseover", () => {
           document.getElementById("instagram-desktop").src =
-            "images/social-media/instagram/color.png";
+            "icons/social-media/instagram/color.png";
         });
       document
         .getElementById("instagram-desktop")
@@ -282,7 +345,7 @@
         .getElementById("email-desktop")
         .addEventListener("mouseover", () => {
           document.getElementById("email-desktop").src =
-            "images/social-media/email/color.png";
+            "icons/social-media/email/color.png";
         });
       document
         .getElementById("email-desktop")
@@ -294,7 +357,7 @@
         .getElementById("github-mobile")
         .addEventListener("mouseover", () => {
           document.getElementById("github-mobile").src =
-            "images/social-media/github/color.png";
+            "icons/social-media/github/color.png";
         });
       document
         .getElementById("github-mobile")
@@ -306,7 +369,7 @@
         .getElementById("facebook-mobile")
         .addEventListener("mouseover", () => {
           document.getElementById("facebook-mobile").src =
-            "images/social-media/facebook/color.png";
+            "icons/social-media/facebook/color.png";
         });
       document
         .getElementById("facebook-mobile")
@@ -318,7 +381,7 @@
         .getElementById("instagram-mobile")
         .addEventListener("mouseover", () => {
           document.getElementById("instagram-mobile").src =
-            "images/social-media/instagram/color.png";
+            "icons/social-media/instagram/color.png";
         });
       document
         .getElementById("instagram-mobile")
@@ -330,7 +393,7 @@
         .getElementById("email-mobile")
         .addEventListener("mouseover", () => {
           document.getElementById("email-mobile").src =
-            "images/social-media/email/color.png";
+            "icons/social-media/email/color.png";
         });
       document
         .getElementById("email-mobile")

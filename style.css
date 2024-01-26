@@ -81,10 +81,16 @@
 .me {
   position: relative;
   width: 70vh;
-  height: 70vh;
+  height: 100%;
   overflow: hidden;
+  .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 }
 .me img {
+  vertical-align: middle;
   width: 100%;
   height: auto;
   border-radius: 50px;
@@ -121,8 +127,28 @@
   transform: scale(1.5);
 }
 
+.social-links a img:active {
+  transform: scale(1.2);
+}
+
+#photography-desktop,
+#photography-mobile {
+  height: 50px;
+  width: 50px;
+}
+
+.cut-excess {
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+}
+
 /* display only if screen size is small enough */
 @media (max-width: 1109px) {
+  .hero-desktop {
+    display: none;
+  }
+
   .mobile {
     display: block;
   }
@@ -290,6 +316,14 @@
 
   .hero-mobile {
     flex-direction: column;
+  }
+
+  .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
   }
 }
 
