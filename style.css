@@ -15,18 +15,18 @@
   display: none;
 }
 
-.hero {
+.hero-desktop,
+.hero-mobile {
   display: flex;
   justify-content: space-around;
   align-items: center;
   vertical-align: middle;
-  height: 75vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
   padding: 20px;
-  z-index: -1;
+  z-index: 0;
 }
 
 @keyframes glitch {
@@ -88,6 +88,7 @@
   width: 100%;
   height: auto;
   border-radius: 50px;
+  transition: all 0.4s ease 0s;
 }
 
 .desc {
@@ -95,6 +96,29 @@
   text-wrap: wrap;
   font-style: italic;
   color: darkgray;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-links a {
+  z-index: 11;
+}
+
+.social-links a img {
+  width: 30px;
+  height: 30px;
+  margin: 30px;
+  cursor: pointer;
+  transition: all 0.4s ease 0s;
+}
+
+.social-links a img:hover {
+  transform: scale(1.5);
 }
 
 /* display only if screen size is small enough */
@@ -123,6 +147,7 @@
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     margin-bottom: 25px;
+    z-index: 10;
   }
 
   body.dark-mode .navbar {
@@ -140,6 +165,7 @@
     position: relative;
     height: 60px;
     align-items: center;
+    z-index: 10;
   }
 
   .navbar .menu-items {
@@ -260,6 +286,10 @@
 
   .nav-container input[type="checkbox"]:checked ~ .section-name {
     display: none;
+  }
+
+  .hero-mobile {
+    flex-direction: column;
   }
 }
 
