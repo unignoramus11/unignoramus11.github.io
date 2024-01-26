@@ -33,8 +33,8 @@ document
   .getElementById("hamburger-menu")
   .addEventListener("change", function () {
     if (this.checked) {
-      document.querySelector('.section-name').style.display = "none";
+      document.querySelector(".section-name").style.display = "none";
     } else {
-      document.querySelector('.section-name').style.display = "block";
+      document.querySelector(".section-name").style.display = "block";
     }
   });

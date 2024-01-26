@@ -14,7 +14,11 @@
         <div class="navbar mobile">
           <div class="nav-container mobile">
             <!-- Hamburger menu toggle -->
-            <input class="checkbox mobile" type="checkbox" id="hamburger-menu" />
+            <input
+              class="checkbox mobile"
+              type="checkbox"
+              id="hamburger-menu"
+            />
 
             <div class="hamburger-lines mobile">
               <span class="line line1 mobile"></span>
@@ -59,8 +63,58 @@
       </nav>
     </header>
 
-    
+    <div class="hero">
+      <div class="vertical-flex">
+        <h1 class="intro">
+          <span class="greeting" id="greeting">Hi!</span>
+          <br />
+          I am Mohit Kumar Singh.
+          <br />
+          <p class="desc">
+            A passionate computer science student who likes photography, reading
+            detective or Sci-fi novels, and tinkering.
+          </p>
+        </h1>
+        <!-- <p class="social-links">
+          <a href=""><img src="" alt="" /></a>
+        </p> -->
+      </div>
+      <div class="me">
+        <img src="images/me-light.png" alt="Me" id="my-photo" />
+      </div>
+    </div>
 
     <script src="theme_script.js"></script>
+    <script>
+      var greetings = ["Hello!", "Hola!", "नमस्ते!", "Hallo!", "Ciao!"];
+      var greetingIndex = 0;
+      var greetingElement = document.getElementById("greeting");
+
+      setInterval(function () {
+        greetingElement.textContent = greetings[greetingIndex];
+        greetingIndex = (greetingIndex + 1) % greetings.length;
+      }, 2000);
+
+      function themeChanged() {
+        var currentTheme = localStorage.getItem("theme");
+        if (currentTheme == "dark") {
+          document.getElementById("my-photo").src = "images/me-dark.png";
+        } else {
+          document.getElementById("my-photo").src = "images/me-light.png";
+        }
+      }
+
+      // change theme automcatically if toggle used
+      document
+        .getElementById("switch-desktop")
+        .addEventListener("change", () => {
+          themeChanged();
+        });
+      document
+        .getElementById("switch-mobile")
+        .addEventListener("change", () => {
+          themeChanged();
+        });
+    </script>
   </body>
 </html>

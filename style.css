@@ -15,6 +15,87 @@
   display: none;
 }
 
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  vertical-align: middle;
+  height: 75vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  padding: 20px;
+}
+
+@keyframes glitch {
+  0%,
+  10%,
+  75%,
+  100% {
+    color: #e7295c;
+    opacity: 1;
+    transform: translate(0);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  75.1% {
+    color: rgb(179, 255, 0); /* Change color */
+    transform: translate(10px, 5px); /* Change position */
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%); /* Change shape */
+  }
+  80% {
+    color: rgb(216, 98, 14);
+    transform: translate(-10px, -5px);
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
+  }
+  85% {
+    color: rgb(0, 132, 255);
+    transform: translate(5px, 10px);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+  90% {
+    color: rgb(255, 0, 0);
+    transform: translate(-5px, -10px);
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+  }
+  95%,
+  5% {
+    opacity: 0;
+  }
+}
+
+.vertical-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.greeting {
+  font-size: 3em;
+  color: #e7295c;
+  animation: glitch 2s infinite;
+}
+
+.me {
+  position: relative;
+  width: 70vh;
+  height: 70vh;
+  overflow: hidden;
+}
+.me img {
+  width: 100%;
+  height: auto;
+  border-radius: 50px;
+}
+
+.desc {
+  font-size: medium;
+  text-wrap: wrap;
+  font-style: italic;
+  color: darkgray;
+}
+
 /* display only if screen size is small enough */
 @media (max-width: 1109px) {
   .mobile {
