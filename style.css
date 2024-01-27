@@ -30,8 +30,7 @@
 }
 
 @keyframes glitch {
-  0%,
-  10%,
+  15%,
   75%,
   100% {
     color: #e7295c;
@@ -75,6 +74,10 @@
 .greeting {
   font-size: 3em;
   color: #e7295c;
+  min-height: 145px;
+}
+
+.shuffle {
   animation: glitch 2s infinite;
 }
 
