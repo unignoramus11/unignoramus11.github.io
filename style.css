@@ -81,17 +81,19 @@
   animation: glitch 2s infinite;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .me {
   position: relative;
   width: 70vh;
   height: 100%;
   overflow: hidden;
-  .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
-}
+
 .me img {
   vertical-align: middle;
   width: 100%;
