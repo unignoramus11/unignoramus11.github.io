@@ -4,10 +4,9 @@ if (!currentTheme) {
 }
 
 if (currentTheme == "dark") {
-  document.body.classList.toggle("dark-mode");
   document.getElementById("switch-mobile").checked = true;
   document.getElementById("switch-desktop").checked = true;
-}
+} else document.body.classList.toggle("dark-mode");
 
 document.getElementById("switch-mobile").addEventListener("click", function () {
   if (localStorage.getItem("theme") == "light") {

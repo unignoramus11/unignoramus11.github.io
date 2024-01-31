@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Arya:wght@700&family=Dancing+Script:wght@500&family=Exo:wght@600&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Rubik+Glitch+Pop&display=swap");
+
 /* Default styles for mobile devices */
 * {
   transition: all 0.1s smooth;
@@ -76,6 +78,7 @@
   font-size: 3em;
   color: #e7295c;
   min-height: 145px;
+  font-family: Arya, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .shuffle {
@@ -104,10 +107,12 @@
 }
 
 .desc {
-  font-size: medium;
+  font-size: large;
+  font-weight: 700;
   text-wrap: wrap;
   font-style: italic;
   color: darkgray;
+  max-width: 50vw;
 }
 
 .social-links {
@@ -135,6 +140,19 @@
 
 .social-links a img:active {
   transform: scale(1.2);
+}
+
+.topic {
+  font-size: 1.5em;
+  font-family: "Dancing Script", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.emphasis {
+  font-family: Exo, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.internal-links {
+  font-size: 1.1em;
 }
 
 #photography-desktop,
@@ -165,6 +183,7 @@
   }
 
   .navbar {
+    height: 20vw;
     margin: auto;
     width: 90%;
     display: flex;
@@ -187,8 +206,7 @@
   }
 
   .navbar .section-name {
-    padding-right: 20px;
-    font-size: 1em;
+    margin-right: auto;
     vertical-align: middle;
   }
 
@@ -335,7 +353,7 @@
 
 body {
   padding: 10px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Nunito, "Work Sans", Verdana, Geneva, Tahoma, sans-serif;
   transition: background-color 0.4s ease;
 }
 
@@ -442,7 +460,6 @@ input:checked + .slider:before {
 
   #name {
     margin-right: auto;
-    font-size: 1.5em;
     vertical-align: middle;
   }
 
