@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" href="favicon.ico" />
   </head>
   <body class="dark-mode">
-    <header>
+    <header style="animation: 2s ease-in-out 0s 1 startGlowNavbar">
       <h1 id="name" class="desktop topic">Mohit Singh</h1>
       <nav>
         <!-- Navbar for mobile = Hamburger menu -->
@@ -69,10 +69,22 @@
     <div class="hero-desktop">
       <div class="vertical-flex" id="intro-desktop">
         <h1 class="intro desktop">
-          <div class="greeting shuffle" id="greeting-desktop">Hi!</div>
-          <span class="emphasis">I am Mohit Kumar Singh.</span>
+          <div
+            class="greeting shuffle"
+            id="greeting-desktop"
+            style="animation: 0.3s ease-in-out 0s 1 slideInFromLeft"
+          >
+            Hi!
+          </div>
+          <span
+            class="emphasis"
+            >I am Mohit Kumar Singh.</span
+          >
           <br />
-          <p class="desc">
+          <p
+            class="desc"
+            style="animation: 0.5s ease-in-out 0s 1 slideInFromLeft"
+          >
             A passionate computer science student who likes photography, reading
             detective or Sci-fi novels, and tinkering.
           </p>
@@ -136,10 +148,16 @@
 
     <div class="hero-mobile">
       <h1 class="intro mobile">
-        <div class="greeting shuffle" id="greeting-mobile">Hi!</div>
+        <div
+          class="greeting shuffle"
+          id="greeting-mobile"
+          style="animation: 0.3s ease-in-out 0s 1 slideInFromLeft"
+        >
+          Hi!
+        </div>
         I am Mohit Kumar Singh.
         <br />
-        <p class="desc">
+        <p class="desc" style="animation: 0.5s ease-in-out 0s 1 slideInFromLeft">
           A passionate computer science student who likes photography, reading
           detective or Sci-fi novels, and tinkering.
         </p>
