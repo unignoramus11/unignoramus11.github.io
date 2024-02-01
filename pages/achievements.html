@@ -6,6 +6,100 @@
     <title>Mohit Singh - Achievements</title>
     <link rel="stylesheet" href="../style.css" />
     <link rel="icon" type="image/png" href="../favicon.png" />
+    <style>
+      .heading {
+        cursor: pointer;
+        transition: 0.4s;
+      }
+
+      .panel {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+      }
+
+      .achievements-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 25px;
+        margin-top: 50px;
+      }
+
+      .achievement-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 95%;
+        border-radius: 25px;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .desktop .achievement-container {
+        margin-bottom: 2rem;
+        padding: 25px;
+        background: #e7295c1f;
+      }
+
+      .achievement-container.active {
+        margin-bottom: 2rem;
+        padding: 25px;
+        background: #e7295c1f;
+      }
+
+      .achievement {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .arrow {
+        font-size: 1.5rem;
+        margin-left: 10px;
+        color: black;
+        transition: all 0.4s ease-in-out;
+      }
+
+      .dark-mode .arrow {
+        color: white;
+      }
+
+      .details {
+        padding-right: 25px;
+        max-width: 75%;
+        line-height: 1.5em;
+      }
+
+      .period {
+        text-align: right;
+        font-style: italic;
+        color: #e7295c;
+        white-space: nowrap;
+      }
+
+      .achievement-container ul {
+        list-style-type: none;
+        padding: 10px;
+      }
+
+      .achievement-container li {
+        padding: 10px;
+      }
+
+      .mobile .heading {
+        font-size: 2rem;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .arrow img {
+        width: 1.5rem;
+        height: 1.5rem;
+        transform: rotate(0deg);
+        transition: all 0.4s ease-in-out;
+      }
+    </style>
   </head>
   <body class="dark-mode">
     <header>
@@ -31,7 +125,9 @@
             <div class="menu-items mobile">
               <li><a href="../index.html">About Me</a></li>
               <li><a href="edu_bg.html">Education Background</a></li>
-              <li><a href="achievements.html" class="active">Achievements</a></li>
+              <li>
+                <a href="achievements.html" class="active">Achievements</a>
+              </li>
               <li><a href="skills.html">Skills</a></li>
               <li><a href="blog.html">Blog</a></li>
               <li>
@@ -64,32 +160,478 @@
       </nav>
     </header>
 
-    <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores ab
-      consectetur dolorem fugiat quisquam earum deserunt ea aut maiores esse?
-      Quo, minus unde? Facilis autem provident eum. Obcaecati nisi voluptas
-      dignissimos totam facere inventore sequi in reprehenderit? Ratione porro
-      voluptates inventore possimus. Voluptate fugiat corrupti sunt ad a vitae
-      corporis commodi odit obcaecati. Eligendi blanditiis modi, sequi ipsa,
-      exercitationem veritatis saepe maxime velit rerum, quisquam obcaecati!
-      Fugiat qui autem impedit dignissimos illo quasi harum aspernatur quaerat
-      eos, dolorum quibusdam eum assumenda ipsa nostrum vitae nobis optio
-      recusandae! Temporibus harum eius sunt vel adipisci praesentium blanditiis
-      accusantium similique possimus. Ipsum neque nobis cupiditate, nostrum
-      adipisci reiciendis harum consectetur voluptatibus facere saepe voluptatem
-      laborum, ducimus commodi doloremque, quibusdam dignissimos enim.
-      Voluptatum cupiditate sint totam dolorum, praesentium perspiciatis
-      voluptas ipsum, ut excepturi laudantium repudiandae consequuntur nostrum
-      sequi fugiat alias. Esse est quae excepturi, ut vero explicabo minus quod
-      accusantium nam nobis facilis obcaecati assumenda iste aperiam
-      consequuntur corporis voluptate voluptas beatae. Eos, quo neque est
-      molestias cumque sit optio dolorum impedit illum omnis ut sapiente veniam
-      modi magnam porro, corrupti labore distinctio. Itaque distinctio
-      architecto sequi, velit dolorem incidunt dolore dicta non cupiditate
-      ducimus dignissimos perspiciatis vero consequuntur, iste mollitia est
-      ratione temporibus.
-    </p>
+    <div class="desktop">
+      <div class="achievements-container">
+        <div
+          class="achievement-container"
+          style="animation: 0.5s ease-in-out 0s 1 slideInFromTop"
+        >
+          <div class="heading">Academics</div>
+          <ul>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  CBSE All India Secondary School Examination (AISSE) - 98.2%
+                  excluding Computer Application and 98.3% including Computer
+                  Application
+                </div>
+                <div class="period emphasis">[Class 10]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Awarded Scholar’s Memento in class 8 for receiving Scholar’s
+                  Badge for 3 consecutive years
+                </div>
+                <div class="period emphasis">[Class 8]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Bihar-Jharkhand Zone Science Stream Topper and School Topper
+                  in CBSE All India Senior School Certificate Examination
+                  (AISSCE) - 99.2%
+                </div>
+                <div class="period emphasis">[Class 12]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">SAT (Collegeboard) Score: 1540/1600</div>
+                <div class="period emphasis">[May 2022]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Joint Entrance Examination (Main) Score: 99.6% AIR 4053
+                </div>
+                <div class="period emphasis">[January 2023]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Joint Entrance Examination (Advanced) AIR 2426
+                </div>
+                <div class="period emphasis">[June 2023]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Undergraduate Entrance Examination (UGEE) AIR 1
+                </div>
+                <div class="period emphasis">[June 2023]</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="achievement-container"
+          style="animation: 0.5s ease-in-out 0s 1 slideInFromLeft"
+        >
+          <div class="heading">Quizzes and Olympiads</div>
+          <ul>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Australian National Chemistry Quiz (Royal Australian Chemical
+                  Institute (RACI)) – High Distinction and Medal of Excellence
+                </div>
+                <div class="period emphasis">[Class 9]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  International Chemistry Quiz (Royal Australian Chemical
+                  Institute (RACI)) – High Distinction
+                </div>
+                <div class="period emphasis">[Class 11]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">Green Olympiad – Distinction</div>
+                <div class="period emphasis">[Class 12]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Science Carnival – Quiz Whiz (Inter-School Science Quiz) – 1st
+                  Position
+                </div>
+                <div class="period emphasis">[Class 12]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  International Mathematics Championship (Camp Yellow and
+                  European Mathematical Society) – Global Rank 1 in Final Round
+                  – Gold Medal Category
+                </div>
+                <div class="period emphasis">[Class 12]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Qualified National Standard Examination in Biology (NSEB -
+                  2022) and National Standard Examination in Astronomy (NSEA -
+                  2022) – Shortlisted to appear in Indian National Biology
+                  Olympiad (INBO - 2023) and Indian National Astronomy Olympiad
+                  (INAO - 2023)
+                </div>
+                <div class="period emphasis">[Class 12]</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="achievement-container"
+          style="animation: 0.5s ease-in-out 0s 1 slideInFromRight"
+        >
+          <div class="heading">National and International Competitions</div>
+          <ul>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  National Children’s Science Congress (NCSC) – participated in
+                  the National Level
+                </div>
+                <div class="period emphasis">[Class 8]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Celesta (Indian Institute of Technology (IIT)-Patna) – Robowar
+                  – 3rd Position
+                </div>
+                <div class="period emphasis">[Class 9]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  National Anveshika Experimental Skill Test (NAEST – NANI)
+                  (Indian Institute of Technology (IIT) - Kanpur and Indian
+                  Association of Physics Teachers (IAPT)) – 3rd Position in
+                  Final Round
+                </div>
+                <div class="period emphasis">[Class 11]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Bi-Wizard School Coding Tournament 3.0 (GeeksforGeeks) – Rank
+                  55
+                </div>
+                <div class="period emphasis">[Class 11]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Hewlett Packard Enterprises (HPE) CodeWars – Rank 24
+                </div>
+                <div class="period emphasis">[Class 12]</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="achievement-container"
+          style="animation: 0.5s ease-in-out 0s 1 slideInFromBottom"
+        >
+          <div class="heading">Other Co-Scholastic Activities</div>
+          <ul>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Orbit – Article published in TES Orbit Magazine
+                </div>
+                <div class="period emphasis">[Class 10]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">Robofest – AI Bootcamp – 2nd Position</div>
+                <div class="period emphasis">[Class 12]</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile">
+      <div class="achievements-container">
+        <div class="achievement-container">
+          <div class="heading accordion">
+            Academics
+            <span class="arrow"
+              ><img src="../icons/arrow.png" alt="Expand/Collapse"
+            /></span>
+          </div>
+          <ul class="panel">
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  CBSE All India Secondary School Examination (AISSE) - 98.2%
+                  excluding Computer Application and 98.3% including Computer
+                  Application
+                </div>
+                <div class="period emphasis">[Class 10]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Awarded Scholar’s Memento in class 8 for receiving Scholar’s
+                  Badge for 3 consecutive years
+                </div>
+                <div class="period emphasis">[Class 8]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Bihar-Jharkhand Zone Science Stream Topper and School Topper
+                  in CBSE All India Senior School Certificate Examination
+                  (AISSCE) - 99.2%
+                </div>
+                <div class="period emphasis">[Class 12]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">SAT (Collegeboard) Score: 1540/1600</div>
+                <div class="period emphasis">[May 2022]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Joint Entrance Examination (Main) Score: 99.6% AIR 4053
+                </div>
+                <div class="period emphasis">[January 2023]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Joint Entrance Examination (Advanced) AIR 2426
+                </div>
+                <div class="period emphasis">[June 2023]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Undergraduate Entrance Examination (UGEE) AIR 1
+                </div>
+                <div class="period emphasis">[June 2023]</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="achievement-container">
+          <div class="heading accordion">
+            Quizzes and Olympiads
+            <span class="arrow"
+              ><img src="../icons/arrow.png" alt="Expand/Collapse"
+            /></span>
+          </div>
+          <ul class="panel">
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Australian National Chemistry Quiz (Royal Australian Chemical
+                  Institute (RACI)) – High Distinction and Medal of Excellence
+                </div>
+                <div class="period emphasis">[Class 9]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  International Chemistry Quiz (Royal Australian Chemical
+                  Institute (RACI)) – High Distinction
+                </div>
+                <div class="period emphasis">[Class 11]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">Green Olympiad – Distinction</div>
+                <div class="period emphasis">[Class 12]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Science Carnival – Quiz Whiz (Inter-School Science Quiz) – 1st
+                  Position
+                </div>
+                <div class="period emphasis">[Class 12]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  International Mathematics Championship (Camp Yellow and
+                  European Mathematical Society) – Global Rank 1 in Final Round
+                  – Gold Medal Category
+                </div>
+                <div class="period emphasis">[Class 12]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Qualified National Standard Examination in Biology (NSEB -
+                  2022) and National Standard Examination in Astronomy (NSEA -
+                  2022) – Shortlisted to appear in Indian National Biology
+                  Olympiad (INBO - 2023) and Indian National Astronomy Olympiad
+                  (INAO - 2023)
+                </div>
+                <div class="period emphasis">[Class 12]</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="achievement-container">
+          <div class="heading accordion">
+            National and International Competitions
+            <span class="arrow"
+              ><img src="../icons/arrow.png" alt="Expand/Collapse"
+            /></span>
+          </div>
+          <ul class="panel">
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  National Children’s Science Congress (NCSC) – participated in
+                  the National Level
+                </div>
+                <div class="period emphasis">[Class 8]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Celesta (Indian Institute of Technology (IIT)-Patna) – Robowar
+                  – 3rd Position
+                </div>
+                <div class="period emphasis">[Class 9]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  National Anveshika Experimental Skill Test (NAEST – NANI)
+                  (Indian Institute of Technology (IIT) - Kanpur and Indian
+                  Association of Physics Teachers (IAPT)) – 3rd Position in
+                  Final Round
+                </div>
+                <div class="period emphasis">[Class 11]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Bi-Wizard School Coding Tournament 3.0 (GeeksforGeeks) – Rank
+                  55
+                </div>
+                <div class="period emphasis">[Class 11]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Hewlett Packard Enterprises (HPE) CodeWars – Rank 24
+                </div>
+                <div class="period emphasis">[Class 12]</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="achievement-container">
+          <div class="heading accordion">
+            Other Co-Scholastic Activities
+            <span class="arrow"
+              ><img src="../icons/arrow.png" alt="Expand/Collapse"
+            /></span>
+          </div>
+          <ul class="panel">
+            <li>
+              <div class="achievement">
+                <div class="details">
+                  Orbit – Article published in TES Orbit Magazine
+                </div>
+                <div class="period emphasis">[Class 10]</div>
+              </div>
+            </li>
+            <li>
+              <div class="achievement">
+                <div class="details">Robofest – AI Bootcamp – 2nd Position</div>
+                <div class="period emphasis">[Class 12]</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <script src="../theme_script.js"></script>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          var arrow = this.querySelector(".arrow img");
+          var panel = this.nextElementSibling;
+          var parent = this.parentNode;
+
+          this.classList.toggle("active");
+
+          for (j = 0; j < acc.length; j++) {
+            if (acc[j] != this && acc[j].classList.contains("active")) {
+              var currPanel = acc[j].nextElementSibling;
+              var currArrow = acc[j].querySelector(".arrow img");
+              var currParent = acc[j].parentNode;
+              currPanel.style.maxHeight = null;
+              acc[j].classList.remove("active");
+              currArrow.style.transform = "rotate(0deg)";
+              currParent.classList.remove("active");
+            }
+          }
+
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            arrow.style.transform = "rotate(0deg)";
+            parent.classList.remove("active");
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            arrow.style.transform = "rotate(180deg)";
+            parent.classList.add("active");
+            parent.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+              inline: "nearest",
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>
