@@ -5,7 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mohit Singh - Blog</title>
     <link rel="stylesheet" href="../style.css" />
-    <link rel="icon" type="image/png" href="../favicon.png" />
+    <link rel="icon" type="image/png" href="../favicon.ico" />
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        height: 100%;
+        width: 100%;
+      }
+
+      .blog-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 250px;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 25px;
+        font-size: 1.2rem;
+        font-weight: 500;
+        transition: all 0.4s ease-in-out;
+        background: #e7295c33;
+      }
+
+      .blog-container:hover {
+        background: #e7295c66;
+        scale: 1.1;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .dark-mode a {
+        color: white;
+      }
+    </style>
   </head>
   <body class="dark-mode">
     <header>
@@ -64,31 +103,52 @@
       </nav>
     </header>
 
-    <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores ab
-      consectetur dolorem fugiat quisquam earum deserunt ea aut maiores esse?
-      Quo, minus unde? Facilis autem provident eum. Obcaecati nisi voluptas
-      dignissimos totam facere inventore sequi in reprehenderit? Ratione porro
-      voluptates inventore possimus. Voluptate fugiat corrupti sunt ad a vitae
-      corporis commodi odit obcaecati. Eligendi blanditiis modi, sequi ipsa,
-      exercitationem veritatis saepe maxime velit rerum, quisquam obcaecati!
-      Fugiat qui autem impedit dignissimos illo quasi harum aspernatur quaerat
-      eos, dolorum quibusdam eum assumenda ipsa nostrum vitae nobis optio
-      recusandae! Temporibus harum eius sunt vel adipisci praesentium blanditiis
-      accusantium similique possimus. Ipsum neque nobis cupiditate, nostrum
-      adipisci reiciendis harum consectetur voluptatibus facere saepe voluptatem
-      laborum, ducimus commodi doloremque, quibusdam dignissimos enim.
-      Voluptatum cupiditate sint totam dolorum, praesentium perspiciatis
-      voluptas ipsum, ut excepturi laudantium repudiandae consequuntur nostrum
-      sequi fugiat alias. Esse est quae excepturi, ut vero explicabo minus quod
-      accusantium nam nobis facilis obcaecati assumenda iste aperiam
-      consequuntur corporis voluptate voluptas beatae. Eos, quo neque est
-      molestias cumque sit optio dolorum impedit illum omnis ut sapiente veniam
-      modi magnam porro, corrupti labore distinctio. Itaque distinctio
-      architecto sequi, velit dolorem incidunt dolore dicta non cupiditate
-      ducimus dignissimos perspiciatis vero consequuntur, iste mollitia est
-      ratione temporibus.
-    </p>
+    <div class="container">
+      <a href="blogs/Pyzzle.html">
+        <div
+          class="blog-container"
+          style="animation: 0.4s ease-in-out 0s 1 popIn"
+        >
+          <div
+            class="thumbnail container"
+            style="
+              background-color: #e7295c66;
+              margin-bottom: 20px;
+              border-radius: 25px;
+            "
+          >
+            <img
+              src="blogs/images/pyzzle-logo.png"
+              alt="Pyzzle logo"
+              style="width: 80%"
+            />
+          </div>
+          <div class="blog">Pyzzle</div>
+        </div>
+      </a>
+      <a href="blogs/NZEB.html">
+        <div
+          class="blog-container"
+          style="animation: 0.6s ease-in-out 0s 1 popIn"
+        >
+          <div
+            class="thumbnail container"
+            style="
+              background-color: #e7295c66;
+              margin-bottom: 20px;
+              border-radius: 25px;
+            "
+          >
+            <img
+              src="blogs/images/nzeb-logo.png"
+              alt="NZEB logo"
+              style="width: 80%"
+            />
+          </div>
+          <div class="blog">NZEB</div>
+        </div>
+      </a>
+    </div>
 
     <script src="../theme_script.js"></script>
   </body>
