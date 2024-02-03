@@ -1,155 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mohit Singh - Blog</title>
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="icon" type="image/png" href="../favicon.ico" />
-    <style>
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-around;
-        height: 100%;
-        width: 100%;
-      }
 
-      .blog-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        max-width: 250px;
-        padding: 20px;
-        margin: 20px;
-        border-radius: 25px;
-        font-size: 1.2rem;
-        font-weight: 500;
-        transition: all 0.4s ease-in-out;
-        background: #e7295c33;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohit Singh - Blog</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/png" href="../favicon.ico" />
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      height: 100%;
+      width: 100%;
+    }
 
-      .blog-container:hover {
-        background: #e7295c66;
-        scale: 1.1;
-      }
+    .blog-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      max-width: 250px;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 25px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      transition: all 0.4s ease-in-out;
+      background: #e7295c33;
+    }
 
-      a {
-        text-decoration: none;
-        color: black;
-      }
+    .blog-container:hover {
+      background: #e7295c66;
+      scale: 1.1;
+    }
 
-      .dark-mode a {
-        color: white;
-      }
-    </style>
-  </head>
-  <body class="dark-mode">
-    <header>
-      <h1 id="name" class="desktop topic">Mohit Singh</h1>
-      <nav>
-        <!-- Navbar for mobile = Hamburger menu -->
-        <div class="navbar mobile">
-          <div class="nav-container mobile">
-            <!-- Hamburger menu toggle -->
-            <input
-              class="checkbox mobile"
-              type="checkbox"
-              id="hamburger-menu"
-            />
+    a {
+      text-decoration: none;
+      color: black;
+    }
 
-            <div class="hamburger-lines mobile">
-              <span class="line line1 mobile"></span>
-              <span class="line line2 mobile"></span>
-              <span class="line line3 mobile"></span>
-            </div>
+    .dark-mode a {
+      color: white;
+    }
+  </style>
+</head>
 
-            <!-- Hamburger menu items -->
-            <div class="menu-items mobile">
-              <li><a href="../index.html">About Me</a></li>
-              <li><a href="edu_bg.html">Education Background</a></li>
-              <li><a href="achievements.html">Achievements</a></li>
-              <li><a href="skills.html">Skills</a></li>
-              <li><a href="blog.html" class="active">Blog</a></li>
-              <li>
-                <label class="theme-switcher" id="theme-switcher-mobile">
-                  <input type="checkbox" id="switch-mobile" />
-                  <span class="slider round"></span>
-                </label>
-              </li>
-            </div>
+<body class="dark-mode">
+  <header>
+    <h1 id="name" class="desktop topic">Mohit Singh</h1>
+    <nav>
+      <!-- Navbar for mobile = Hamburger menu -->
+      <div class="navbar mobile">
+        <div class="nav-container mobile">
+          <!-- Hamburger menu toggle -->
+          <input class="checkbox mobile" type="checkbox" id="hamburger-menu" />
+
+          <div class="hamburger-lines mobile">
+            <span class="line line1 mobile"></span>
+            <span class="line line2 mobile"></span>
+            <span class="line line3 mobile"></span>
           </div>
 
-          <!-- Section name -->
-          <h1 class="section-name topic">Blog</h1>
+          <!-- Hamburger menu items -->
+          <div class="menu-items mobile">
+            <li><a href="../index.html">About Me</a></li>
+            <li><a href="edu_bg.html">Education Background</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li>
+              <label class="theme-switcher" id="theme-switcher-mobile">
+                <input type="checkbox" id="switch-mobile" />
+                <span class="slider round"></span>
+              </label>
+            </li>
+          </div>
         </div>
 
-        <!-- Navbar for desktop -->
-        <ul class="desktop internal-links">
-          <li><a href="../index.html">About Me</a></li>
-          <li><a href="edu_bg.html">Education Background</a></li>
-          <li><a href="achievements.html">Achievements</a></li>
-          <li><a href="skills.html">Skills</a></li>
-          <li><a href="blog.html" class="active">Blog</a></li>
-          <li>
-            <label class="theme-switcher">
-              <input type="checkbox" id="switch-desktop" />
-              <span class="slider round"></span>
-            </label>
-          </li>
-        </ul>
-      </nav>
-    </header>
+        <!-- Section name -->
+        <h1 class="section-name topic">Blog</h1>
+      </div>
 
-    <div class="container">
-      <a href="blogs/Pyzzle.html">
-        <div
-          class="blog-container"
-          style="animation: 0.4s ease-in-out 0s 1 popIn"
-        >
-          <div
-            class="thumbnail container"
-            style="
+      <!-- Navbar for desktop -->
+      <ul class="desktop internal-links">
+        <li><a href="../index.html">About Me</a></li>
+        <li><a href="edu_bg.html">Education Background</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li>
+          <label class="theme-switcher">
+            <input type="checkbox" id="switch-desktop" />
+            <span class="slider round"></span>
+          </label>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <a href="blogs/Pyzzle.html" target="_blank">
+      <div class="blog-container" style="animation: 0.4s ease-in-out 0s 1 popIn">
+        <div class="thumbnail container" style="
               background-color: #e7295c66;
               margin-bottom: 20px;
               border-radius: 25px;
-            "
-          >
-            <img
-              src="blogs/images/pyzzle-logo.png"
-              alt="Pyzzle logo"
-              style="width: 80%"
-            />
-          </div>
-          <div class="blog">Pyzzle</div>
+            ">
+          <img src="blogs/images/pyzzle-logo.png" alt="Pyzzle logo" style="width: 80%" />
         </div>
-      </a>
-      <a href="blogs/NZEB.html">
-        <div
-          class="blog-container"
-          style="animation: 0.6s ease-in-out 0s 1 popIn"
-        >
-          <div
-            class="thumbnail container"
-            style="
+        <div class="blog">Pyzzle</div>
+      </div>
+    </a>
+    <a href="blogs/NZEB.html" target="_blank">
+      <div class="blog-container" style="animation: 0.6s ease-in-out 0s 1 popIn">
+        <div class="thumbnail container" style="
               background-color: #e7295c66;
               margin-bottom: 20px;
               border-radius: 25px;
-            "
-          >
-            <img
-              src="blogs/images/nzeb-logo.png"
-              alt="NZEB logo"
-              style="width: 80%"
-            />
-          </div>
-          <div class="blog">NZEB</div>
+            ">
+          <img src="blogs/images/nzeb-logo.png" alt="NZEB logo" style="width: 80%" />
         </div>
-      </a>
-    </div>
+        <div class="blog">NZEB</div>
+      </div>
+    </a>
+  </div>
 
-    <script src="../theme_script.js"></script>
-  </body>
+  <script src="../theme_script.js"></script>
+</body>
+
 </html>

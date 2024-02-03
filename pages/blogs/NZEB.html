@@ -1,389 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NZEB</title>
-    <link rel="icon" type="image/png" href="../../favicon.ico" />
-    <link rel="stylesheet" href="../../style.css" />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #0e621f;
-        animation: popIn 0.4s;
-        color: Black;
-      }
 
-      .dark-mode {
-        color: #fff;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NZEB</title>
+  <link rel="icon" type="image/png" href="../../favicon.ico" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #0e621f;
+      animation: popIn 0.4s;
+      color: Black;
+    }
 
-      h1 {
-        color: #333;
-      }
+    body.dark-mode {
+      background-color: #04340e;
+      color: #fff;
+    }
 
-      .dark-mode h1 {
-        color: #d1d1d1;
-      }
+    h1 {
+      color: #333;
+    }
 
-      blockquote {
-        border-left: 3px solid #333;
-        margin: 0;
-        padding-left: 10px;
-      }
+    .dark-mode h1 {
+      color: #d1d1d1;
+    }
 
-      p {
-        margin-bottom: 10px;
-      }
+    blockquote {
+      border-left: 3px solid #333;
+      margin: 0;
+      padding-left: 10px;
+    }
 
-      ol,
-      ul {
-        margin-bottom: 10px;
-        padding-left: 20px;
-      }
+    p {
+      margin-bottom: 10px;
+    }
 
-      img {
-        width: 80%;
-        max-width: 1000px;
-        height: auto;
-        border: 1px solid #333;
-        margin: 10px 0;
-      }
+    ol,
+    ul {
+      margin-bottom: 10px;
+      padding-left: 20px;
+    }
 
-      .container {
-        background-color: rgb(43, 226, 119);
-        border-radius: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 90vw;
-        box-shadow: -10px 10px 20px #06311b;
-      }
+    img {
+      width: 80%;
+      max-width: 1000px;
+      height: auto;
+      border: 1px solid #333;
+      margin: 10px 0;
+    }
 
-      .content {
-        margin: 20px;
-        padding: 20px;
-        background-color: rgba(255, 255, 255, 0.8);
-        border-radius: 50px;
-      }
+    .container {
+      background-color: rgb(43, 226, 119);
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90vw;
+      box-shadow: -10px 10px 20px #06311b;
+    }
 
-      .dark-mode .content {
-        background-color: rgba(0, 0, 0, 0.8);
-      }
+    .content {
+      margin: 20px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 50px;
+    }
 
-      #comments-likes {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        width: 80%;
-      }
+    .dark-mode .content {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
 
-      .sub-content {
-        padding: 20px;
-        margin: 10px;
-      }
+    #comments-likes {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+    }
 
-      .back {
-        width: 50px;
-        height: 50px;
-        border: 0;
-        background-color: #e7295c;
-        border-radius: 50%;
-        padding: 10px;
-      }
+    .sub-content {
+      padding: 20px;
+      margin: 10px;
+    }
 
-      .comments-container {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
+    .back {
+      width: 50px;
+      height: 50px;
+      border: 0;
+      background-color: #e7295c;
+      border-radius: 50%;
+      padding: 10px;
+    }
 
-      .comment-container {
-        width: 100%;
-        padding: 10px;
-        margin: 10px;
-        background-color: rgba(255, 255, 255, 0.8);
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
+    .comments-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
-      .dark-mode .comment-container {
-        background-color: rgba(0, 0, 0, 0.8);
-      }
+    .comment-container {
+      width: 100%;
+      padding: 10px;
+      margin: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-      .comment-uname {
-        font-weight: bold;
-        color: #e7295c;
-      }
+    .dark-mode .comment-container {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
 
-      .comment-content {
-        margin-top: 5px;
-      }
+    .comment-uname {
+      font-weight: bold;
+      color: #e7295c;
+    }
 
-      .comment-btn {
-        padding: 10px;
-        background-color: #e7295c;
-        color: white;
-        border: 0;
-        cursor: pointer;
-        border-radius: 10px;
-        transition: all 0.2s ease-in-out;
-      }
+    .comment-content {
+      margin-top: 5px;
+    }
 
-      .comment-btn:hover {
-        transform: scale(1.1);
-      }
+    .comment-btn {
+      padding: 10px;
+      background-color: #e7295c;
+      color: white;
+      border: 0;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: all 0.2s ease-in-out;
+    }
 
-      a {
-        text-decoration: none;
-        color: #e7295c;
-      }
+    .comment-btn:hover {
+      transform: scale(1.1);
+    }
 
-      a:hover {
-        text-decoration: underline;
-      }
-    </style>
-    <title>NZEB</title>
-  </head>
+    a {
+      text-decoration: none;
+      color: #e7295c;
+    }
 
-  <body class="dark-mode">
-    <div class="container">
-      <div class="content">
-        <div class="heading">
-          <a href="../blog.html"
-            ><img src="../../icons/back.png" alt="Go back" class="back"
-          /></a>
-          <h1>NZEB</h1>
-        </div>
-        <blockquote>
-          <p>
-            <em
-              >We have combined the various renewable energy sources by integrating
-          them in a single house to tackle various energy needs, be it
-          temperature regulation, lighting or other electronic appliances.</em
-            >
-          </p>
-        </blockquote>
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <title>NZEB</title>
+</head>
 
-        <p>
-          NZEB has been designed in such a manner that it minimizes the wastage
-          of energy and even stores the surplus energy in a battery pack. Even
-          the rainfall is effectively harvested in the designs, and used for
-          various realistic purposes like watering the plants, after required
-          treatment.
-        </p>
-        <p>
-          Energy forms a large part of our lives - especially in the form of
-          electricity. For the generation of this electricity, enormous amounts
-          of non-renewable sources including fossil fuels like coal, are used
-          everyday. This not only leads to their depletion, but also several
-          other environmental problems including, but not limited to, global
-          warming. By using only the renewable resources, our house fulfills all
-          the common energy requirements of a house, all while not harming the
-          environment.
-        </p>
-        <p>
-          To bring this idea to reality, we have researched extensively on every
-          detail about the house, ranging from 24*7 lighting, to minimizing the
-          wastage of natural resources including rainwater. We have developed a
-          working model of the NZEB and have tried to increase awareness of such
-          buildings.
-        </p>
-        <p>
-          The greatest challenge in our project is the fact that for the
-          absolute proof of concept, our project needs a real-life building with
-          the integration of the various measures that we have designed in our
-          project. This, however, requires a large amount of investment and
-          funding, which is beyond our capacity. Without this, we can't also
-          obtain data regarding the actual effectiveness of our project, at the
-          current stage.
-        </p>
-
-        <a href="documents/NZEB.pdf">
-          <div
-            style="display: flex; align-items: center; justify-content: center; margin: 50px;"
-          >
-            <img
-              src="icons/pdf.png"
-              alt="NZEB"
-              style="width: 50px; height: auto; border: 0; margin: 10px;"
-            />
-            Click here to open the PDF
-          </div>
-        </a>
+<body class="dark-mode">
+  <div class="container">
+    <div class="content">
+      <div class="heading">
+        <a href="../blog.html"><img src="../../icons/back.png" alt="Go back" class="back" /></a>
+        <h1>NZEB</h1>
       </div>
-      <div class="content" id="comments-likes">
-        <div class="sub-content">
-          <div
-            style="
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-            "
-          >
-            <img
-              src="../../icons/disliked.png"
-              alt=""
-              id="like-dislike"
-              style="width: 50px; height: 50px; cursor: pointer; border: 0"
-            />
-            <p style="display: inline" id="like-count">0</p>
-          </div>
+      <blockquote>
+        <p>
+          <em>We have combined the various renewable energy sources by integrating
+            them in a single house to tackle various energy needs, be it
+            temperature regulation, lighting or other electronic appliances.</em>
+        </p>
+      </blockquote>
+
+      <p>
+        NZEB has been designed in such a manner that it minimizes the wastage
+        of energy and even stores the surplus energy in a battery pack. Even
+        the rainfall is effectively harvested in the designs, and used for
+        various realistic purposes like watering the plants, after required
+        treatment.
+      </p>
+      <p>
+        Energy forms a large part of our lives - especially in the form of
+        electricity. For the generation of this electricity, enormous amounts
+        of non-renewable sources including fossil fuels like coal, are used
+        everyday. This not only leads to their depletion, but also several
+        other environmental problems including, but not limited to, global
+        warming. By using only the renewable resources, our house fulfills all
+        the common energy requirements of a house, all while not harming the
+        environment.
+      </p>
+      <p>
+        To bring this idea to reality, we have researched extensively on every
+        detail about the house, ranging from 24*7 lighting, to minimizing the
+        wastage of natural resources including rainwater. We have developed a
+        working model of the NZEB and have tried to increase awareness of such
+        buildings.
+      </p>
+      <p>
+        The greatest challenge in our project is the fact that for the
+        absolute proof of concept, our project needs a real-life building with
+        the integration of the various measures that we have designed in our
+        project. This, however, requires a large amount of investment and
+        funding, which is beyond our capacity. Without this, we can't also
+        obtain data regarding the actual effectiveness of our project, at the
+        current stage.
+      </p>
+
+      <a href="documents/NZEB.pdf" type="pdf">
+        <div style="display: flex; align-items: center; justify-content: center; margin: 50px;">
+          <img src="icons/pdf.png" alt="NZEB"
+            style="width: 50px; height: auto; border: 0; margin: 10px; background-color: #ffa1ba; border-radius: 10px; padding: 10px;" />
+          Click here to open the PDF
         </div>
-        <div class="sub-content">
-          <form
-            id="comment-form"
-            style="
+      </a>
+    </div>
+    <div class="content" id="comments-likes">
+      <div class="sub-content">
+        <div style="
               display: flex;
               flex-direction: column;
               align-items: center;
               justify-content: center;
-            "
-          >
-            <h2>Comments</h2>
-            <input
-              type="text"
-              name="username"
-              placeholder="Enter your name..."
-              style="width: 90%; padding: 10px; border-radius: 10px; border: 0"
-            />
-            <input
-              type="text"
-              name="comment"
-              placeholder="Add a comment..."
-              style="
+            ">
+          <img src="../../icons/disliked.png" alt="" id="like-dislike"
+            style="width: 50px; height: 50px; cursor: pointer; border: 0" />
+          <p style="display: inline" id="like-count">0</p>
+        </div>
+      </div>
+      <div class="sub-content">
+        <form id="comment-form" style="
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+            ">
+          <h2>Comments</h2>
+          <input type="text" name="username" placeholder="Enter your name..."
+            style="width: 90%; padding: 10px; border-radius: 10px; border: 0" />
+          <input type="text" name="comment" placeholder="Enter your comment..." style="
                 width: 90%;
                 padding: 10px;
                 margin: 20px;
                 border-radius: 10px;
                 border: 0;
-              "
-            />
-            <button type="submit" class="comment-btn">Comment</button>
-          </form>
+              " />
+          <button type="submit" class="comment-btn">Comment</button>
+        </form>
 
-          <div
-            id="comments"
-            style="
+        <div id="comments" style="
               text-align: left;
               margin-top: 50px;
               display: flex;
               flex-direction: column;
               align-items: center;
               justify-content: center;
-            "
-            class="comments-container"
-          ></div>
-        </div>
+            " class="comments-container"></div>
       </div>
     </div>
+  </div>
 
-    <script src="../../theme_script.js"></script>
+  <script src="../../theme_script.js"></script>
 
-    <!-- Like script -->
-    <script>
-      if (!localStorage.getItem("likeCount-NZEB")) {
-        localStorage.setItem("likeCount-NZEB", "255");
-      }
-      if (!localStorage.getItem("liked-NZEB")) {
+  <!-- Like script -->
+  <script>
+    if (!localStorage.getItem("likeCount-NZEB")) {
+      localStorage.setItem("likeCount-NZEB", "255");
+    }
+    if (!localStorage.getItem("liked-NZEB")) {
+      localStorage.setItem("liked-NZEB", "not-liked");
+    }
+
+    document.getElementById("like-dislike").src =
+      localStorage.getItem("liked-NZEB") == "liked"
+        ? "../../icons/liked.png"
+        : "../../icons/disliked.png";
+
+    document.getElementById("like-count").textContent =
+      localStorage.getItem("likeCount-NZEB");
+
+    const likeDislike = document.getElementById("like-dislike");
+
+    likeDislike.addEventListener("click", () => {
+      likeDislike.style.animation = "popIn 0.3s";
+      likeDislike.style.animationFillMode = "forwards";
+      setTimeout(() => {
+        likeDislike.style.animation = "";
+      }, 300);
+
+      if (localStorage.getItem("liked-NZEB") == "liked") {
+        likeDislike.src = "../../icons/disliked.png";
         localStorage.setItem("liked-NZEB", "not-liked");
+        localStorage.setItem(
+          "likeCount-NZEB",
+          String(Number(localStorage.getItem("likeCount-NZEB")) - 1)
+        );
+      } else {
+        likeDislike.src = "../../icons/liked.png";
+        localStorage.setItem("liked-NZEB", "liked");
+        localStorage.setItem(
+          "likeCount-NZEB",
+          String(Number(localStorage.getItem("likeCount-NZEB")) + 1)
+        );
       }
-
-      document.getElementById("like-dislike").src =
-        localStorage.getItem("liked-NZEB") == "liked"
-          ? "../../icons/liked.png"
-          : "../../icons/disliked.png";
-
       document.getElementById("like-count").textContent =
         localStorage.getItem("likeCount-NZEB");
+    });
+  </script>
 
-      const likeDislike = document.getElementById("like-dislike");
+  <!-- Comment script -->
+  <script>
+    function loadComments() {
+      var comments = JSON.parse(localStorage.getItem("comments-NZEB")) || [];
+      var commentSection = document.getElementById("comments");
 
-      likeDislike.addEventListener("click", () => {
-        if (localStorage.getItem("liked-NZEB") == "liked") {
-          likeDislike.src = "../../icons/disliked.png";
-          localStorage.setItem("liked-NZEB", "not-liked");
-          localStorage.setItem(
-            "likeCount-NZEB",
-            String(Number(localStorage.getItem("likeCount-NZEB")) - 1)
-          );
-        } else {
-          likeDislike.src = "../../icons/liked.png";
-          localStorage.setItem("liked-NZEB", "liked");
-          localStorage.setItem(
-            "likeCount-NZEB",
-            String(Number(localStorage.getItem("likeCount-NZEB")) + 1)
-          );
-        }
-        document.getElementById("like-count").textContent =
-          localStorage.getItem("likeCount-NZEB");
-      });
-    </script>
+      for (var i = 0; i < comments.length; i++) {
+        var commentDiv = document.createElement("div");
+        commentDiv.className = "comment-container";
 
-    <!-- Comment script -->
-    <script>
-      function loadComments() {
-        var comments = JSON.parse(localStorage.getItem("comments-NZEB")) || [];
-        var commentSection = document.getElementById("comments");
+        var nameDiv = document.createElement("div");
+        nameDiv.className = "comment-uname";
+        nameDiv.textContent = comments[i].username;
 
-        for (var i = 0; i < comments.length; i++) {
-          var commentDiv = document.createElement("div");
-          commentDiv.className = "comment-container";
+        var textDiv = document.createElement("div");
+        textDiv.className = "comment-content";
+        textDiv.textContent = comments[i].comment;
 
-          var nameDiv = document.createElement("div");
-          nameDiv.className = "comment-uname";
-          nameDiv.textContent = comments[i].username;
+        commentDiv.appendChild(nameDiv);
+        commentDiv.appendChild(textDiv);
 
-          var textDiv = document.createElement("div");
-          textDiv.className = "comment-content";
-          textDiv.textContent = comments[i].comment;
+        // Append the comment div to the comment section
+        commentSection.appendChild(commentDiv);
+      }
+    }
 
-          commentDiv.appendChild(nameDiv);
-          commentDiv.appendChild(textDiv);
+    loadComments();
 
-          // Append the comment div to the comment section
-          commentSection.appendChild(commentDiv);
-        }
+    const commentForm = document.getElementById("comment-form");
+    commentForm.addEventListener("submit", (data) => {
+      data.preventDefault();
+      const username = data.target.username.value;
+      const comment = data.target.comment.value;
+
+      if (!username || !comment) {
+        return;
       }
 
+      if (!localStorage.getItem("comments-NZEB")) {
+        localStorage.setItem("comments-NZEB", "[]");
+      }
+
+      const comments = JSON.parse(localStorage.getItem("comments-NZEB"));
+      comments.push({ username, comment });
+      localStorage.setItem("comments-NZEB", JSON.stringify(comments));
+
+      data.target.username.value = "";
+      data.target.comment.value = "";
+
+      const commentSection = document.getElementById("comments");
+      commentSection.innerHTML = "";
       loadComments();
+    });
+  </script>
+</body>
 
-      const commentForm = document.getElementById("comment-form");
-      commentForm.addEventListener("submit", (data) => {
-        data.preventDefault();
-        const username = data.target.username.value;
-        const comment = data.target.comment.value;
-
-        if (!username || !comment) {
-          return;
-        }
-
-        if (!localStorage.getItem("comments-NZEB")) {
-          localStorage.setItem("comments-NZEB", "[]");
-        }
-
-        const comments = JSON.parse(localStorage.getItem("comments-NZEB"));
-        comments.push({ username, comment });
-        localStorage.setItem("comments-NZEB", JSON.stringify(comments));
-
-        data.target.username.value = "";
-        data.target.comment.value = "";
-
-        const commentSection = document.getElementById("comments");
-        commentSection.innerHTML = "";
-        loadComments();
-      });
-    </script>
-  </body>
 </html>

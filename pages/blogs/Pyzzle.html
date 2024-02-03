@@ -1,468 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pyzzle</title>
-    <link rel="icon" type="image/png" href="../../favicon.ico" />
-    <link rel="stylesheet" href="../../style.css" />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #390e62;
-        animation: popIn 0.4s;
-        color: Black;
-      }
 
-      .dark-mode {
-        color: #fff;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pyzzle</title>
+  <link rel="icon" type="image/png" href="../../favicon.ico" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #390e62;
+      animation: popIn 0.4s;
+      color: Black;
+    }
 
-      h1 {
-        color: #333;
-      }
+    body.dark-mode {
+      background-color: #1b1025;
+      color: #fff;
+    }
 
-      .dark-mode h1 {
-        color: #d1d1d1;
-      }
+    h1 {
+      color: #333;
+    }
 
-      blockquote {
-        border-left: 3px solid #333;
-        margin: 0;
-        padding-left: 10px;
-      }
+    .dark-mode h1 {
+      color: #d1d1d1;
+    }
 
-      p {
-        margin-bottom: 10px;
-      }
+    blockquote {
+      border-left: 3px solid #333;
+      margin: 0;
+      padding-left: 10px;
+    }
 
-      ol,
-      ul {
-        margin-bottom: 10px;
-        padding-left: 20px;
-      }
+    p {
+      margin-bottom: 10px;
+    }
 
-      img {
-        width: 80%;
-        max-width: 1000px;
-        height: auto;
-        border: 1px solid #333;
-        margin: 10px 0;
-      }
+    ol,
+    ul {
+      margin-bottom: 10px;
+      padding-left: 20px;
+    }
 
-      .container {
-        background-color: blueviolet;
-        border-radius: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 90vw;
-        box-shadow: -10px 10px 20px #1d0631;
-      }
+    img {
+      width: 80%;
+      max-width: 1000px;
+      height: auto;
+      border: 1px solid #333;
+      margin: 10px 0;
+    }
 
-      .content {
-        margin: 20px;
-        padding: 20px;
-        background-color: rgba(255, 255, 255, 0.8);
-        border-radius: 50px;
-      }
+    .container {
+      background-color: blueviolet;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90vw;
+      box-shadow: -10px 10px 20px #1d0631;
+    }
 
-      .dark-mode .content {
-        background-color: rgba(0, 0, 0, 0.8);
-      }
+    .content {
+      margin: 20px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 50px;
+    }
 
-      #comments-likes {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        width: 80%;
-      }
+    .dark-mode .content {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
 
-      .sub-content {
-        padding: 20px;
-        margin: 10px;
-      }
+    #comments-likes {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+    }
 
-      .back {
-        width: 50px;
-        height: 50px;
-        border: 0;
-        background-color: #e7295c;
-        border-radius: 50%;
-        padding: 10px;
-      }
+    .sub-content {
+      padding: 20px;
+      margin: 10px;
+    }
 
-      .comments-container {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
+    .back {
+      width: 50px;
+      height: 50px;
+      border: 0;
+      background-color: #e7295c;
+      border-radius: 50%;
+      padding: 10px;
+    }
 
-      .comment-container {
-        width: 100%;
-        padding: 10px;
-        margin: 10px;
-        background-color: rgba(255, 255, 255, 0.8);
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
+    .comments-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
-      .dark-mode .comment-container {
-        background-color: rgba(0, 0, 0, 0.8);
-      }
+    .comment-container {
+      width: 100%;
+      padding: 10px;
+      margin: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-      .comment-uname {
-        font-weight: bold;
-        color: #e7295c;
-      }
+    .dark-mode .comment-container {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
 
-      .comment-content {
-        margin-top: 5px;
-      }
+    .comment-uname {
+      font-weight: bold;
+      color: #e7295c;
+    }
 
-      .comment-btn {
-        padding: 10px;
-        background-color: #e7295c;
-        color: white;
-        border: 0;
-        cursor: pointer;
-        border-radius: 10px;
-        transition: all 0.2s ease-in-out;
-      }
+    .comment-content {
+      margin-top: 5px;
+    }
 
-      .comment-btn:hover {
-        transform: scale(1.1);
-      }
-    </style>
-    <title>Pyzzle - Puzzle Game</title>
-  </head>
+    .comment-btn {
+      padding: 10px;
+      background-color: #e7295c;
+      color: white;
+      border: 0;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: all 0.2s ease-in-out;
+    }
 
-  <body class="dark-mode">
-    <div class="container">
-      <div class="content">
-        <div class="heading">
-          <a href="../blog.html"
-            ><img src="../../icons/back.png" alt="Go back" class="back"
-          /></a>
-          <h1>Pyzzle</h1>
-        </div>
-        <blockquote>
-          <p><em>A puzzle game coded entirely in Python.</em></p>
-        </blockquote>
-        <p>This is a school project created by me, Mohit Singh.</p>
-        <p>
-          The .exe file, created from the main.py script, is a short puzzle game
-          with a plethora of little features and details.
-        </p>
-        <ol>
-          <li>
-            The moment you enter the game, it first checks if you are a
-            returning player and displays a short tutorial accordingly. Even if
-            the game has been played on your device once, it skips the tutorial.
-            <img
-              src="https://user-images.githubusercontent.com/83200950/147316557-9750f0f6-2eba-4bda-85ac-4e73b2b4dfec.png"
-              alt="Game Screenshot"
-            />
-          </li>
-          <li>
-            It then asks for your name. If you are a returning player, it then
-            displays your highest score yet, else it skips to the main menu of
-            the game.
-            <p>Prompt for name:</p>
-            <img
-              src="https://user-images.githubusercontent.com/83200950/147316656-06a19db9-89a2-4e81-9a08-92cc53b198a4.png"
-              alt="Name Prompt"
-            />
-            <p>Displaying highest score of the player:</p>
-            <img
-              src="https://user-images.githubusercontent.com/83200950/147316739-e9c03be7-0e31-4c11-9d01-b7189bf2c0f9.png"
-              alt="Highest Score"
-            />
-          </li>
-          <li>
-            In the main menu, you can select one option from 'Play', 'Tutorial',
-            'Scoreboard', or 'Quit', to perform the respective actions. This
-            selection can be performed by typing in the required command. I have
-            also made sure that case doesn't matter anywhere in the game, making
-            the experience just a bit better.
-            <p>Main Menu:</p>
-            <img
-              src="https://user-images.githubusercontent.com/83200950/147316850-bc74224a-415e-4e5a-ac45-612af2a2e110.png"
-              alt="Main Menu"
-            />
-            <ul>
-              <li>
-                Selecting 'Play' launches the main game. This consists of a
-                series of questions which you have to answer correctly. Some of
-                the questions also have certain time limits and you are given
-                points on the basis of the time you take. The quicker you
-                answer, greater points you score. If you answer incorrectly or
-                take too much time, you lose the game. Here, I have created a
-                short answer checking algorithm so that it is not necessary to
-                enter all the words correctly. If even a part (single word) of
-                the answer matches the correct answer, then full points are
-                given. (For example, 'an egg' is treated to be same as 'egg' or
-                'the egg').
-                <p>Gameplay:</p>
-                <img
-                  src="https://user-images.githubusercontent.com/83200950/147317320-25e6eaa3-0b82-48a5-9961-d745da1c0945.png"
-                  alt="Play Game"
-                />
-              </li>
-              <li>
-                Selecting 'Tutorial' brings up the same short tutorial that is
-                shown to new users.
-                <p>Tutorial:</p>
-                <img
-                  src="https://user-images.githubusercontent.com/83200950/147317418-6574af63-0efa-407b-805f-0c80d58031d7.png"
-                  alt="Tutorial Image 1"
-                />
-              </li>
-              <li>
-                Selecting 'Scoreboard' brings up the scoreboard with a list of
-                scores of all the players, arranged in descending order
-                according to the respective scores. You are automatically
-                returned to the main menu after 5 seconds.
-                <p>Scoreboard:</p>
-                <img
-                  src="https://user-images.githubusercontent.com/83200950/147317642-c5bf1616-f559-4fb4-a385-6b80da17593c.png"
-                  alt="Scoreboard"
-                />
-              </li>
-              <li>
-                Selecting 'Quit' save the current progress and closes the game
-                window.
-                <p>Quit Game:</p>
-                <img
-                  src="https://user-images.githubusercontent.com/83200950/147317724-de5e15a7-87c7-4bf1-87ee-5dae6198f0e5.png"
-                  alt="Quit Game"
-                />
-              </li>
-            </ul>
-          </li>
-        </ol>
-        <h2>Troubleshooting Features</h2>
-        <ul>
-          <li>
-            Right when the game starts and asks for your name, if you input
-            'reset' or 'restore', it will perform the respective actions.
-            'Reset' renames the score.txt file to old_score.txt, thus creating a
-            backup of the previous score as well as resetting the game to the
-            fresh-install state. 'Restore' searches for the old_score.txt file
-            and reverts it back to score.txt, thus bringing back the old scores.
-            <p>Reset and Restore:</p>
-            <img
-              src="https://user-images.githubusercontent.com/83200950/147319088-1c6f0d70-3b27-4a41-bf29-cea920348549.png"
-              alt="Reset and Restore"
-            />
-          </li>
-          <li>
-            While in the main menu, you can type 'reset' to perform the same
-            action as in 1, except for the fact that in this case, the game also
-            saves the current player's score in the backup and then closes the
-            window.
-            <p>Reset in Main Menu:</p>
-            <img
-              src="https://user-images.githubusercontent.com/83200950/147319224-4ac73db9-fb3b-40b6-b018-991ae1f98255.png"
-              alt="Reset in Main Menu"
-            />
-          </li>
-        </ul>
-        <h2>Sources</h2>
-        <p>
-          All the questions and their respective answers were obtained from the
-          following website(s):
-        </p>
-        <ol>
-          <li>
-            <a href="https://www.rd.com/article/short-riddles/"
-              >Reader's Digest</a
-            >
-          </li>
-          <li>
-            <a href="https://www.getriddles.com/short-riddles/">Get Riddles</a>
-          </li>
-          <li>
-            <a
-              href="https://thoughtcatalog.com/january-nelson/2020/08/short-riddles/"
-              >Thought Catalog</a
-            >
-          </li>
-        </ol>
+    .comment-btn:hover {
+      transform: scale(1.1);
+    }
+  </style>
+  <title>Pyzzle - Puzzle Game</title>
+</head>
+
+<body class="dark-mode">
+  <div class="container">
+    <div class="content">
+      <div class="heading">
+        <a href="../blog.html"><img src="../../icons/back.png" alt="Go back" class="back" /></a>
+        <h1>Pyzzle</h1>
       </div>
-      <div class="content" id="comments-likes">
-        <div class="sub-content">
-          <div
-            style="
+      <blockquote>
+        <p><em>A puzzle game coded entirely in Python.</em></p>
+      </blockquote>
+      <p>This is a school project created by me, Mohit Singh.</p>
+      <p>
+        The .exe file, created from the main.py script, is a short puzzle game
+        with a plethora of little features and details.
+      </p>
+      <ol>
+        <li>
+          The moment you enter the game, it first checks if you are a
+          returning player and displays a short tutorial accordingly. Even if
+          the game has been played on your device once, it skips the tutorial.
+          <img
+            src="https://user-images.githubusercontent.com/83200950/147316557-9750f0f6-2eba-4bda-85ac-4e73b2b4dfec.png"
+            alt="Game Screenshot" />
+        </li>
+        <li>
+          It then asks for your name. If you are a returning player, it then
+          displays your highest score yet, else it skips to the main menu of
+          the game.
+          <p>Prompt for name:</p>
+          <img
+            src="https://user-images.githubusercontent.com/83200950/147316656-06a19db9-89a2-4e81-9a08-92cc53b198a4.png"
+            alt="Name Prompt" />
+          <p>Displaying highest score of the player:</p>
+          <img
+            src="https://user-images.githubusercontent.com/83200950/147316739-e9c03be7-0e31-4c11-9d01-b7189bf2c0f9.png"
+            alt="Highest Score" />
+        </li>
+        <li>
+          In the main menu, you can select one option from 'Play', 'Tutorial',
+          'Scoreboard', or 'Quit', to perform the respective actions. This
+          selection can be performed by typing in the required command. I have
+          also made sure that case doesn't matter anywhere in the game, making
+          the experience just a bit better.
+          <p>Main Menu:</p>
+          <img
+            src="https://user-images.githubusercontent.com/83200950/147316850-bc74224a-415e-4e5a-ac45-612af2a2e110.png"
+            alt="Main Menu" />
+          <ul>
+            <li>
+              Selecting 'Play' launches the main game. This consists of a
+              series of questions which you have to answer correctly. Some of
+              the questions also have certain time limits and you are given
+              points on the basis of the time you take. The quicker you
+              answer, greater points you score. If you answer incorrectly or
+              take too much time, you lose the game. Here, I have created a
+              short answer checking algorithm so that it is not necessary to
+              enter all the words correctly. If even a part (single word) of
+              the answer matches the correct answer, then full points are
+              given. (For example, 'an egg' is treated to be same as 'egg' or
+              'the egg').
+              <p>Gameplay:</p>
+              <img
+                src="https://user-images.githubusercontent.com/83200950/147317320-25e6eaa3-0b82-48a5-9961-d745da1c0945.png"
+                alt="Play Game" />
+            </li>
+            <li>
+              Selecting 'Tutorial' brings up the same short tutorial that is
+              shown to new users.
+              <p>Tutorial:</p>
+              <img
+                src="https://user-images.githubusercontent.com/83200950/147317418-6574af63-0efa-407b-805f-0c80d58031d7.png"
+                alt="Tutorial Image 1" />
+            </li>
+            <li>
+              Selecting 'Scoreboard' brings up the scoreboard with a list of
+              scores of all the players, arranged in descending order
+              according to the respective scores. You are automatically
+              returned to the main menu after 5 seconds.
+              <p>Scoreboard:</p>
+              <img
+                src="https://user-images.githubusercontent.com/83200950/147317642-c5bf1616-f559-4fb4-a385-6b80da17593c.png"
+                alt="Scoreboard" />
+            </li>
+            <li>
+              Selecting 'Quit' save the current progress and closes the game
+              window.
+              <p>Quit Game:</p>
+              <img
+                src="https://user-images.githubusercontent.com/83200950/147317724-de5e15a7-87c7-4bf1-87ee-5dae6198f0e5.png"
+                alt="Quit Game" />
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <h2>Troubleshooting Features</h2>
+      <ul>
+        <li>
+          Right when the game starts and asks for your name, if you input
+          'reset' or 'restore', it will perform the respective actions.
+          'Reset' renames the score.txt file to old_score.txt, thus creating a
+          backup of the previous score as well as resetting the game to the
+          fresh-install state. 'Restore' searches for the old_score.txt file
+          and reverts it back to score.txt, thus bringing back the old scores.
+          <p>Reset and Restore:</p>
+          <img
+            src="https://user-images.githubusercontent.com/83200950/147319088-1c6f0d70-3b27-4a41-bf29-cea920348549.png"
+            alt="Reset and Restore" />
+        </li>
+        <li>
+          While in the main menu, you can type 'reset' to perform the same
+          action as in 1, except for the fact that in this case, the game also
+          saves the current player's score in the backup and then closes the
+          window.
+          <p>Reset in Main Menu:</p>
+          <img
+            src="https://user-images.githubusercontent.com/83200950/147319224-4ac73db9-fb3b-40b6-b018-991ae1f98255.png"
+            alt="Reset in Main Menu" />
+        </li>
+      </ul>
+    </div>
+    <div class="content" id="comments-likes">
+      <div class="sub-content">
+        <div style="
               display: flex;
               flex-direction: column;
               align-items: center;
               justify-content: center;
-            "
-          >
-            <img
-              src="../../icons/disliked.png"
-              alt=""
-              id="like-dislike"
-              style="width: 50px; height: 50px; cursor: pointer; border: 0"
-            />
-            <p style="display: inline" id="like-count">0</p>
-          </div>
+            ">
+          <img src="../../icons/disliked.png" alt="" id="like-dislike"
+            style="width: 50px; height: 50px; cursor: pointer; border: 0" />
+          <p style="display: inline" id="like-count">0</p>
         </div>
-        <div class="sub-content">
-          <form
-            id="comment-form"
-            style="
+      </div>
+      <div class="sub-content">
+        <form id="comment-form" style="
               display: flex;
               flex-direction: column;
               align-items: center;
               justify-content: center;
-            "
-          >
-            <h2>Comments</h2>
-            <input
-              type="text"
-              name="username"
-              placeholder="Enter your name..."
-              style="width: 90%; padding: 10px; border-radius: 10px; border: 0"
-            />
-            <input
-              type="text"
-              name="comment"
-              placeholder="Add a comment..."
-              style="
+            ">
+          <h2>Comments</h2>
+          <input type="text" name="username" placeholder="Enter your name..."
+            style="width: 90%; padding: 10px; border-radius: 10px; border: 0" />
+          <input type="text" name="comment" placeholder="Enter your comment..." style="
                 width: 90%;
                 padding: 10px;
                 margin: 20px;
                 border-radius: 10px;
                 border: 0;
-              "
-            />
-            <button type="submit" class="comment-btn">Comment</button>
-          </form>
+              " />
+          <button type="submit" class="comment-btn">Comment</button>
+        </form>
 
-          <div
-            id="comments"
-            style="
+        <div id="comments" style="
               text-align: left;
               margin-top: 50px;
               display: flex;
               flex-direction: column;
               align-items: center;
               justify-content: center;
-            "
-            class="comments-container"
-          ></div>
-        </div>
+            " class="comments-container"></div>
       </div>
     </div>
+  </div>
 
-    <script src="../../theme_script.js"></script>
+  <script src="../../theme_script.js"></script>
 
-    <!-- Like script -->
-    <script>
-      if (!localStorage.getItem("likeCount-pyzzle")) {
-        localStorage.setItem("likeCount-pyzzle", "255");
-      }
-      if (!localStorage.getItem("liked-pyzzle")) {
+  <!-- Like script -->
+  <script>
+    if (!localStorage.getItem("likeCount-pyzzle")) {
+      localStorage.setItem("likeCount-pyzzle", "255");
+    }
+    if (!localStorage.getItem("liked-pyzzle")) {
+      localStorage.setItem("liked-pyzzle", "not-liked");
+    }
+
+    document.getElementById("like-dislike").src =
+      localStorage.getItem("liked-pyzzle") == "liked"
+        ? "../../icons/liked.png"
+        : "../../icons/disliked.png";
+
+    document.getElementById("like-count").textContent =
+      localStorage.getItem("likeCount-pyzzle");
+
+    const likeDislike = document.getElementById("like-dislike");
+
+    likeDislike.addEventListener("click", () => {
+      likeDislike.style.animation = "popIn 0.3s";
+      likeDislike.style.animationFillMode = "forwards";
+      setTimeout(() => {
+        likeDislike.style.animation = "";
+      }, 300);
+
+      if (localStorage.getItem("liked-pyzzle") == "liked") {
+        likeDislike.src = "../../icons/disliked.png";
         localStorage.setItem("liked-pyzzle", "not-liked");
+        localStorage.setItem(
+          "likeCount-pyzzle",
+          String(Number(localStorage.getItem("likeCount-pyzzle")) - 1)
+        );
+      } else {
+        likeDislike.src = "../../icons/liked.png";
+        localStorage.setItem("liked-pyzzle", "liked");
+        localStorage.setItem(
+          "likeCount-pyzzle",
+          String(Number(localStorage.getItem("likeCount-pyzzle")) + 1)
+        );
       }
-
-      document.getElementById("like-dislike").src =
-        localStorage.getItem("liked-pyzzle") == "liked"
-          ? "../../icons/liked.png"
-          : "../../icons/disliked.png";
-
       document.getElementById("like-count").textContent =
         localStorage.getItem("likeCount-pyzzle");
+    });
+  </script>
 
-      const likeDislike = document.getElementById("like-dislike");
+  <!-- Comment script -->
+  <script>
+    function loadComments() {
+      var comments =
+        JSON.parse(localStorage.getItem("comments-pyzzle")) || [];
+      var commentSection = document.getElementById("comments");
 
-      likeDislike.addEventListener("click", () => {
-        if (localStorage.getItem("liked-pyzzle") == "liked") {
-          likeDislike.src = "../../icons/disliked.png";
-          localStorage.setItem("liked-pyzzle", "not-liked");
-          localStorage.setItem(
-            "likeCount-pyzzle",
-            String(Number(localStorage.getItem("likeCount-pyzzle")) - 1)
-          );
-        } else {
-          likeDislike.src = "../../icons/liked.png";
-          localStorage.setItem("liked-pyzzle", "liked");
-          localStorage.setItem(
-            "likeCount-pyzzle",
-            String(Number(localStorage.getItem("likeCount-pyzzle")) + 1)
-          );
-        }
-        document.getElementById("like-count").textContent =
-          localStorage.getItem("likeCount-pyzzle");
-      });
-    </script>
+      for (var i = 0; i < comments.length; i++) {
+        var commentDiv = document.createElement("div");
+        commentDiv.className = "comment-container";
 
-    <!-- Comment script -->
-    <script>
-      function loadComments() {
-        var comments =
-          JSON.parse(localStorage.getItem("comments-pyzzle")) || [];
-        var commentSection = document.getElementById("comments");
+        var nameDiv = document.createElement("div");
+        nameDiv.className = "comment-uname";
+        nameDiv.textContent = comments[i].username;
 
-        for (var i = 0; i < comments.length; i++) {
-          var commentDiv = document.createElement("div");
-          commentDiv.className = "comment-container";
+        var textDiv = document.createElement("div");
+        textDiv.className = "comment-content";
+        textDiv.textContent = comments[i].comment;
 
-          var nameDiv = document.createElement("div");
-          nameDiv.className = "comment-uname";
-          nameDiv.textContent = comments[i].username;
+        commentDiv.appendChild(nameDiv);
+        commentDiv.appendChild(textDiv);
 
-          var textDiv = document.createElement("div");
-          textDiv.className = "comment-content";
-          textDiv.textContent = comments[i].comment;
+        // Append the comment div to the comment section
+        commentSection.appendChild(commentDiv);
+      }
+    }
 
-          commentDiv.appendChild(nameDiv);
-          commentDiv.appendChild(textDiv);
+    loadComments();
 
-          // Append the comment div to the comment section
-          commentSection.appendChild(commentDiv);
-        }
+    const commentForm = document.getElementById("comment-form");
+    commentForm.addEventListener("submit", (data) => {
+      data.preventDefault();
+      const username = data.target.username.value;
+      const comment = data.target.comment.value;
+
+      if (!username || !comment) {
+        return;
       }
 
+      if (!localStorage.getItem("comments-pyzzle")) {
+        localStorage.setItem("comments-pyzzle", "[]");
+      }
+
+      const comments = JSON.parse(localStorage.getItem("comments-pyzzle"));
+      comments.push({ username, comment });
+      localStorage.setItem("comments-pyzzle", JSON.stringify(comments));
+
+      data.target.username.value = "";
+      data.target.comment.value = "";
+
+      const commentSection = document.getElementById("comments");
+      commentSection.innerHTML = "";
       loadComments();
+    });
+  </script>
+</body>
 
-      const commentForm = document.getElementById("comment-form");
-      commentForm.addEventListener("submit", (data) => {
-        data.preventDefault();
-        const username = data.target.username.value;
-        const comment = data.target.comment.value;
-
-        if (!username || !comment) {
-          return;
-        }
-
-        if (!localStorage.getItem("comments-pyzzle")) {
-          localStorage.setItem("comments-pyzzle", "[]");
-        }
-
-        const comments = JSON.parse(localStorage.getItem("comments-pyzzle"));
-        comments.push({ username, comment });
-        localStorage.setItem("comments-pyzzle", JSON.stringify(comments));
-
-        data.target.username.value = "";
-        data.target.comment.value = "";
-
-        const commentSection = document.getElementById("comments");
-        commentSection.innerHTML = "";
-        loadComments();
-      });
-    </script>
-  </body>
 </html>

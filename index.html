@@ -1,408 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mohit Singh – About Me</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/ico" href="favicon.ico" />
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="apple-touch-icon" href="favicon.ico" />
-  </head>
-  <body class="dark-mode">
-    <header>
-      <h1 id="name" class="desktop topic">Mohit Singh</h1>
-      <nav>
-        <!-- Navbar for mobile = Hamburger menu -->
-        <div class="navbar mobile">
-          <div class="nav-container mobile">
-            <!-- Hamburger menu toggle -->
-            <input
-              class="checkbox mobile"
-              type="checkbox"
-              id="hamburger-menu"
-            />
 
-            <div class="hamburger-lines mobile">
-              <span class="line line1 mobile"></span>
-              <span class="line line2 mobile"></span>
-              <span class="line line3 mobile"></span>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohit Singh – About Me</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/ico" href="favicon.ico" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="favicon.ico" />
 
-            <!-- Hamburger menu items -->
-            <div class="menu-items mobile">
-              <li><a href="index.html" class="active">About Me</a></li>
-              <li><a href="pages/edu_bg.html">Education Background</a></li>
-              <li><a href="pages/achievements.html">Achievements</a></li>
-              <li><a href="pages/skills.html">Skills</a></li>
-              <li><a href="pages/blog.html">Blog</a></li>
-              <li>
-                <label class="theme-switcher" id="theme-switcher-mobile">
-                  <input type="checkbox" id="switch-mobile" />
-                  <span class="slider round"></span>
-                </label>
-              </li>
-            </div>
+  <style>
+    footer a {
+      text-decoration: none;
+      color: #e7295c;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 20px;
+      padding: 20px;
+      text-align: center;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+      box-shadow: 0 -15px 30px 0 #d0ddf4;
+      transition: all 0.4s ease 0s;
+    }
+
+    .dark-mode footer {
+      box-shadow: 0 -15px 30px 0 #6112278f;
+    }
+  </style>
+</head>
+
+<body class="dark-mode">
+  <header>
+    <h1 id="name" class="desktop topic">Mohit Singh</h1>
+    <nav>
+      <!-- Navbar for mobile = Hamburger menu -->
+      <div class="navbar mobile">
+        <div class="nav-container mobile">
+          <!-- Hamburger menu toggle -->
+          <input class="checkbox mobile" type="checkbox" id="hamburger-menu" />
+
+          <div class="hamburger-lines mobile">
+            <span class="line line1 mobile"></span>
+            <span class="line line2 mobile"></span>
+            <span class="line line3 mobile"></span>
           </div>
 
-          <!-- Section name -->
-          <h1 class="section-name topic">About Me</h1>
+          <!-- Hamburger menu items -->
+          <div class="menu-items mobile">
+            <li><a href="index.html" class="active">About Me</a></li>
+            <li><a href="pages/edu_bg.html">Education Background</a></li>
+            <li><a href="pages/achievements.html">Achievements</a></li>
+            <li><a href="pages/skills.html">Skills</a></li>
+            <li><a href="pages/blog.html">Blog</a></li>
+            <li>
+              <label class="theme-switcher" id="theme-switcher-mobile">
+                <input type="checkbox" id="switch-mobile" />
+                <span class="slider round"></span>
+              </label>
+            </li>
+          </div>
         </div>
 
-        <!-- Navbar for desktop -->
-        <ul class="desktop internal-links">
-          <li><a href="index.html" class="active">About Me</a></li>
-          <li><a href="pages/edu_bg.html">Education Background</a></li>
-          <li><a href="pages/achievements.html">Achievements</a></li>
-          <li><a href="pages/skills.html">Skills</a></li>
-          <li><a href="pages/blog.html">Blog</a></li>
-          <li>
-            <label class="theme-switcher">
-              <input type="checkbox" id="switch-desktop" />
-              <span class="slider round"></span>
-            </label>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <div class="hero-desktop">
-      <div class="vertical-flex" id="intro-desktop">
-        <h1 class="intro desktop">
-          <div class="greeting shuffle" id="greeting-desktop">Hi!</div>
-          <span class="emphasis">I am Mohit Kumar Singh.</span>
-          <br />
-          <p class="desc">
-            A passionate computer science student who likes photography, reading
-            detective or Sci-fi novels, and tinkering.
-          </p>
-        </h1>
-        <div class="social-links">
-          <a href="https://github.com/unignoramus11" target="_blank"
-            ><img
-              src="icons/social-media/github/white.png"
-              alt="GitHub"
-              id="github-desktop"
-              class="desktop"
-          /></a>
-          <a href="https://www.linkedin.com/in/unignoramus/" target="_blank"
-            ><img
-              src="icons/social-media/linkedIn/white.png"
-              alt="LinkedIn"
-              id="linkedin-desktop"
-              class="desktop"
-          /></a>
-          <a href="https://www.facebook.com/unignoramus/" target="_blank"
-            ><img
-              src="icons/social-media/facebook/white.png"
-              alt="Facebook"
-              id="facebook-desktop"
-              class="desktop"
-          /></a>
-          <a href="https://www.instagram.com/unignoramus/" target="_blank"
-            ><img
-              src="icons/social-media/instagram/white.png"
-              alt="Instagram"
-              id="instagram-desktop"
-              class="desktop"
-          /></a>
-          <a href="mailto:unignoramus@gmail.com"
-            ><img
-              src="icons/social-media/email/white.png"
-              alt="Email"
-              id="email-desktop"
-              class="desktop"
-          /></a>
-        </div>
-        <div class="social-links">
-          <a href="https://vsco.co/unignoramus/gallery" target="_blank"
-            ><img
-              src="icons/camera.png"
-              alt="Photography Profile"
-              id="photography-desktop"
-              class="desktop"
-          /></a>
-        </div>
+        <!-- Section name -->
+        <h1 class="section-name topic">About Me</h1>
       </div>
-      <div class="me desktop">
-        <img
-          src="images/me-light.png"
-          alt="Me"
-          id="my-photo-desktop"
-          class="desktop"
-          style="animation: 0.5s ease-in-out 0s 1 slideInFromRight"
-        />
-      </div>
-    </div>
 
-    <div class="hero-mobile">
-      <h1 class="intro mobile">
-        <div class="greeting shuffle" id="greeting-mobile">Hi!</div>
-        I am Mohit Kumar Singh.
+      <!-- Navbar for desktop -->
+      <ul class="desktop internal-links">
+        <li><a href="index.html" class="active">About Me</a></li>
+        <li><a href="pages/edu_bg.html">Education Background</a></li>
+        <li><a href="pages/achievements.html">Achievements</a></li>
+        <li><a href="pages/skills.html">Skills</a></li>
+        <li><a href="pages/blog.html">Blog</a></li>
+        <li>
+          <label class="theme-switcher">
+            <input type="checkbox" id="switch-desktop" />
+            <span class="slider round"></span>
+          </label>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero-desktop">
+    <div class="vertical-flex" id="intro-desktop">
+      <h1 class="intro desktop">
+        <div class="greeting shuffle" id="greeting-desktop">Hi!</div>
+        <span class="emphasis">I am Mohit Kumar Singh.</span>
         <br />
         <p class="desc">
           A passionate computer science student who likes photography, reading
           detective or Sci-fi novels, and tinkering.
         </p>
       </h1>
-      <div class="me mobile cut-excess">
-        <img
-          src="images/me-light.png"
-          alt="Me"
-          id="my-photo-mobile"
-          class="mobile"
-          style="animation: 0.5s ease-in-out 0s 1 slideInFromRight"
-        />
+      <div class="social-links">
+        <a href="https://github.com/unignoramus11" target="_blank"><img src="icons/social-media/github/white.png"
+            alt="GitHub" id="github-desktop" class="desktop" /></a>
+        <a href="https://www.linkedin.com/in/unignoramus/" target="_blank"><img
+            src="icons/social-media/linkedIn/white.png" alt="LinkedIn" id="linkedin-desktop" class="desktop" /></a>
+        <a href="https://www.facebook.com/unignoramus/" target="_blank"><img src="icons/social-media/facebook/white.png"
+            alt="Facebook" id="facebook-desktop" class="desktop" /></a>
+        <a href="https://www.instagram.com/unignoramus/" target="_blank"><img
+            src="icons/social-media/instagram/white.png" alt="Instagram" id="instagram-desktop" class="desktop" /></a>
+        <a href="mailto:mohit.singh@research.iiit.ac.in"><img src="icons/social-media/email/white.png" alt="Email"
+            id="email-desktop" class="desktop" /></a>
       </div>
       <div class="social-links">
-        <a href="https://github.com/unignoramus11" target="_blank"
-          ><img
-            src="icons/social-media/github/white.png"
-            alt="GitHub"
-            id="github-mobile"
-            class="mobile"
-        /></a>
-        <a href="https://www.linkedin.com/in/unignoramus/" target="_blank"
-          ><img
-            src="icons/social-media/linkedIn/white.png"
-            alt="LinkedIn"
-            id="linkedin-mobile"
-            class="mobile"
-        /></a>
-        <a href="https://www.facebook.com/unignoramus/" target="_blank"
-          ><img
-            src="icons/social-media/facebook/white.png"
-            alt="Facebook"
-            id="facebook-mobile"
-            class="mobile"
-        /></a>
-        <a href="https://www.instagram.com/unignoramus/" target="_blank"
-          ><img
-            src="icons/social-media/instagram/white.png"
-            alt="Instagram"
-            id="instagram-mobile"
-            class="mobile"
-        /></a>
-        <a href="mailto:mohit.singh@research.iiit.ac.in"
-          ><img
-            src="icons/social-media/email/white.png"
-            alt="Email"
-            id="email-mobile"
-            class="mobile"
-        /></a>
-      </div>
-      <div class="social-links">
-        <a href="https://vsco.co/unignoramus/gallery" target="_blank"
-          ><img
-            src="icons/camera.png"
-            alt="Photography Profile"
-            id="photography-mobile"
-            class="mobile"
-        /></a>
+        <a href="https://vsco.co/unignoramus/gallery" target="_blank"><img src="icons/camera.png"
+            alt="Photography Profile" id="photography-desktop" class="desktop" /></a>
       </div>
     </div>
+    <div class="me desktop">
+      <img src="images/me-light.png" alt="Me" id="my-photo-desktop" class="desktop"
+        style="animation: 0.5s ease-in-out 0s 1 slideInFromRight" />
+    </div>
+  </div>
 
-    <script src="theme_script.js"></script>
-    <script>
-      var greetings = [
-        "ওহে!",
-        "Hola!",
-        "नमस्ते!",
-        "Hallo!",
-        "হ্যালো!",
-        "Ciao!",
-        " హలో!",
-        "γεια!",
-        "హలో!",
-        "Hi!",
-      ];
-      var greetingIndex = 0;
-      var greetingElementDesktop = document.getElementById("greeting-desktop");
-      var greetingElementMobile = document.getElementById("greeting-mobile");
+  <div class="hero-mobile">
+    <h1 class="intro mobile">
+      <div class="greeting shuffle" id="greeting-mobile">Hi!</div>
+      I am Mohit Kumar Singh.
+      <br />
+      <p class="desc">
+        A passionate computer science student who likes photography, reading
+        detective or Sci-fi novels, and tinkering.
+      </p>
+    </h1>
+    <div class="me mobile cut-excess">
+      <img src="images/me-light.png" alt="Me" id="my-photo-mobile" class="mobile"
+        style="animation: 0.5s ease-in-out 0s 1 slideInFromRight" />
+    </div>
+    <div class="social-links">
+      <a href="https://github.com/unignoramus11" target="_blank"><img src="icons/social-media/github/white.png"
+          alt="GitHub" id="github-mobile" class="mobile" /></a>
+      <a href="https://www.linkedin.com/in/unignoramus/" target="_blank"><img
+          src="icons/social-media/linkedIn/white.png" alt="LinkedIn" id="linkedin-mobile" class="mobile" /></a>
+      <a href="https://www.facebook.com/unignoramus/" target="_blank"><img src="icons/social-media/facebook/white.png"
+          alt="Facebook" id="facebook-mobile" class="mobile" /></a>
+      <a href="https://www.instagram.com/unignoramus/" target="_blank"><img src="icons/social-media/instagram/white.png"
+          alt="Instagram" id="instagram-mobile" class="mobile" /></a>
+      <a href="mailto:mohit.singh@research.iiit.ac.in"><img src="icons/social-media/email/white.png" alt="Email"
+          id="email-mobile" class="mobile" /></a>
+    </div>
+    <div class="social-links">
+      <a href="https://vsco.co/unignoramus/gallery" target="_blank"><img src="icons/camera.png"
+          alt="Photography Profile" id="photography-mobile" class="mobile" /></a>
+    </div>
+  </div>
 
-      setInterval(function () {
-        greetingElementDesktop.textContent = greetings[greetingIndex];
-        greetingElementMobile.textContent = greetings[greetingIndex];
-        greetingIndex = (greetingIndex + 1) % greetings.length;
-      }, 2000);
+  <footer>
+    <div>
+      <h2 class="topic">Credits</h2>
+      <p class="credits" style="text-align: center;">
+        This website is designed and developed by Mohit Kumar Singh. All the icons are obtained from
+        <a href="https://icons8.com/" target="_blank">Icons8</a> and <a href="https://www.flaticon.com/"
+          target="_blank">Flaticon</a>.
+      </p>
+    </div>
+  </footer>
 
-      function themeChanged() {
-        var currentTheme = localStorage.getItem("theme");
-        if (currentTheme == "dark") {
-          document.getElementById("my-photo-desktop").src =
-            "images/me-dark.png";
-          document.getElementById("github-desktop").src =
-            "icons/social-media/github/white.png";
-          document.getElementById("linkedin-desktop").src =
-            "icons/social-media/linkedIn/white.png";
-          document.getElementById("facebook-desktop").src =
-            "icons/social-media/facebook/white.png";
-          document.getElementById("instagram-desktop").src =
-            "icons/social-media/instagram/white.png";
-          document.getElementById("email-desktop").src =
-            "icons/social-media/email/white.png";
+  <script src="theme_script.js"></script>
+  <script>
+    var greetings = [
+      "ওহে!",
+      "Hola!",
+      "नमस्ते!",
+      "Hallo!",
+      "হ্যালো!",
+      "Ciao!",
+      " హలో!",
+      "γεια!",
+      "హలో!",
+      "Hi!",
+    ];
+    var greetingIndex = 0;
+    var greetingElementDesktop = document.getElementById("greeting-desktop");
+    var greetingElementMobile = document.getElementById("greeting-mobile");
 
-          document.getElementById("my-photo-mobile").src = "images/me-dark.png";
-          document.getElementById("github-mobile").src =
-            "icons/social-media/github/white.png";
-          document.getElementById("linkedin-mobile").src =
-            "icons/social-media/linkedIn/white.png";
-          document.getElementById("facebook-mobile").src =
-            "icons/social-media/facebook/white.png";
-          document.getElementById("instagram-mobile").src =
-            "icons/social-media/instagram/white.png";
-          document.getElementById("email-mobile").src =
-            "icons/social-media/email/white.png";
-        } else {
-          document.getElementById("my-photo-desktop").src =
-            "images/me-light.png";
-          document.getElementById("github-desktop").src =
-            "icons/social-media/github/black.png";
-          document.getElementById("linkedin-desktop").src =
-            "icons/social-media/linkedIn/black.png";
-          document.getElementById("facebook-desktop").src =
-            "icons/social-media/facebook/black.png";
-          document.getElementById("instagram-desktop").src =
-            "icons/social-media/instagram/black.png";
-          document.getElementById("email-desktop").src =
-            "icons/social-media/email/black.png";
+    setInterval(function () {
+      greetingElementDesktop.textContent = greetings[greetingIndex];
+      greetingElementMobile.textContent = greetings[greetingIndex];
+      greetingIndex = (greetingIndex + 1) % greetings.length;
+    }, 2000);
 
-          document.getElementById("my-photo-mobile").src =
-            "images/me-light.png";
-          document.getElementById("github-mobile").src =
-            "icons/social-media/github/black.png";
-          document.getElementById("linkedin-mobile").src =
-            "icons/social-media/linkedIn/black.png";
-          document.getElementById("facebook-mobile").src =
-            "icons/social-media/facebook/black.png";
-          document.getElementById("instagram-mobile").src =
-            "icons/social-media/instagram/black.png";
-          document.getElementById("email-mobile").src =
-            "icons/social-media/email/black.png";
-        }
+    function themeChanged() {
+      var currentTheme = localStorage.getItem("theme");
+      if (currentTheme == "dark") {
+        document.getElementById("my-photo-desktop").src =
+          "images/me-dark.png";
+        document.getElementById("github-desktop").src =
+          "icons/social-media/github/white.png";
+        document.getElementById("linkedin-desktop").src =
+          "icons/social-media/linkedIn/white.png";
+        document.getElementById("facebook-desktop").src =
+          "icons/social-media/facebook/white.png";
+        document.getElementById("instagram-desktop").src =
+          "icons/social-media/instagram/white.png";
+        document.getElementById("email-desktop").src =
+          "icons/social-media/email/white.png";
+
+        document.getElementById("my-photo-mobile").src = "images/me-dark.png";
+        document.getElementById("github-mobile").src =
+          "icons/social-media/github/white.png";
+        document.getElementById("linkedin-mobile").src =
+          "icons/social-media/linkedIn/white.png";
+        document.getElementById("facebook-mobile").src =
+          "icons/social-media/facebook/white.png";
+        document.getElementById("instagram-mobile").src =
+          "icons/social-media/instagram/white.png";
+        document.getElementById("email-mobile").src =
+          "icons/social-media/email/white.png";
+      } else {
+        document.getElementById("my-photo-desktop").src =
+          "images/me-light.png";
+        document.getElementById("github-desktop").src =
+          "icons/social-media/github/black.png";
+        document.getElementById("linkedin-desktop").src =
+          "icons/social-media/linkedIn/black.png";
+        document.getElementById("facebook-desktop").src =
+          "icons/social-media/facebook/black.png";
+        document.getElementById("instagram-desktop").src =
+          "icons/social-media/instagram/black.png";
+        document.getElementById("email-desktop").src =
+          "icons/social-media/email/black.png";
+
+        document.getElementById("my-photo-mobile").src =
+          "images/me-light.png";
+        document.getElementById("github-mobile").src =
+          "icons/social-media/github/black.png";
+        document.getElementById("linkedin-mobile").src =
+          "icons/social-media/linkedIn/black.png";
+        document.getElementById("facebook-mobile").src =
+          "icons/social-media/facebook/black.png";
+        document.getElementById("instagram-mobile").src =
+          "icons/social-media/instagram/black.png";
+        document.getElementById("email-mobile").src =
+          "icons/social-media/email/black.png";
       }
+    }
 
-      themeChanged();
-      // change theme automcatically if toggle used
-      document
-        .getElementById("switch-desktop")
-        .addEventListener("change", () => {
-          themeChanged();
-        });
-      document
-        .getElementById("switch-mobile")
-        .addEventListener("change", () => {
-          themeChanged();
-        });
+    themeChanged();
+    // change theme automcatically if toggle used
+    document
+      .getElementById("switch-desktop")
+      .addEventListener("change", () => {
+        themeChanged();
+      });
+    document
+      .getElementById("switch-mobile")
+      .addEventListener("change", () => {
+        themeChanged();
+      });
 
-      // change the social icons to colored ones on hover
-      document
-        .getElementById("github-desktop")
-        .addEventListener("mouseover", () => {
-          document.getElementById("github-desktop").src =
-            "icons/social-media/github/color.png";
-        });
-      document
-        .getElementById("github-desktop")
-        .addEventListener("mouseout", () => {
-          themeChanged();
-        });
+    // change the social icons to colored ones on hover
+    document
+      .getElementById("github-desktop")
+      .addEventListener("mouseover", () => {
+        document.getElementById("github-desktop").src =
+          "icons/social-media/github/color.png";
+      });
+    document
+      .getElementById("github-desktop")
+      .addEventListener("mouseout", () => {
+        themeChanged();
+      });
 
-      document
-        .getElementById("linkedin-desktop")
-        .addEventListener("mouseover", () => {
-          document.getElementById("linkedin-desktop").src =
-            "icons/social-media/linkedIn/color.png";
-        });
-      document
-        .getElementById("linkedin-desktop")
-        .addEventListener("mouseout", () => {
-          themeChanged();
-        });
+    document
+      .getElementById("linkedin-desktop")
+      .addEventListener("mouseover", () => {
+        document.getElementById("linkedin-desktop").src =
+          "icons/social-media/linkedIn/color.png";
+      });
+    document
+      .getElementById("linkedin-desktop")
+      .addEventListener("mouseout", () => {
+        themeChanged();
+      });
 
-      document
-        .getElementById("facebook-desktop")
-        .addEventListener("mouseover", () => {
-          document.getElementById("facebook-desktop").src =
-            "icons/social-media/facebook/color.png";
-        });
-      document
-        .getElementById("facebook-desktop")
-        .addEventListener("mouseout", () => {
-          themeChanged();
-        });
+    document
+      .getElementById("facebook-desktop")
+      .addEventListener("mouseover", () => {
+        document.getElementById("facebook-desktop").src =
+          "icons/social-media/facebook/color.png";
+      });
+    document
+      .getElementById("facebook-desktop")
+      .addEventListener("mouseout", () => {
+        themeChanged();
+      });
 
-      document
-        .getElementById("instagram-desktop")
-        .addEventListener("mouseover", () => {
-          document.getElementById("instagram-desktop").src =
-            "icons/social-media/instagram/color.png";
-        });
-      document
-        .getElementById("instagram-desktop")
-        .addEventListener("mouseout", () => {
-          themeChanged();
-        });
+    document
+      .getElementById("instagram-desktop")
+      .addEventListener("mouseover", () => {
+        document.getElementById("instagram-desktop").src =
+          "icons/social-media/instagram/color.png";
+      });
+    document
+      .getElementById("instagram-desktop")
+      .addEventListener("mouseout", () => {
+        themeChanged();
+      });
 
-      document
-        .getElementById("email-desktop")
-        .addEventListener("mouseover", () => {
-          document.getElementById("email-desktop").src =
-            "icons/social-media/email/color.png";
-        });
-      document
-        .getElementById("email-desktop")
-        .addEventListener("mouseout", () => {
-          themeChanged();
-        });
+    document
+      .getElementById("email-desktop")
+      .addEventListener("mouseover", () => {
+        document.getElementById("email-desktop").src =
+          "icons/social-media/email/color.png";
+      });
+    document
+      .getElementById("email-desktop")
+      .addEventListener("mouseout", () => {
+        themeChanged();
+      });
 
-      document
-        .getElementById("github-mobile")
-        .addEventListener("mouseover", () => {
-          document.getElementById("github-mobile").src =
-            "icons/social-media/github/color.png";
-        });
-      document
-        .getElementById("github-mobile")
-        .addEventListener("mouseout", () => {
-          themeChanged();
-        });
+    document
+      .getElementById("github-mobile")
+      .addEventListener("mouseover", () => {
+        document.getElementById("github-mobile").src =
+          "icons/social-media/github/color.png";
+      });
+    document
+      .getElementById("github-mobile")
+      .addEventListener("mouseout", () => {
+        themeChanged();
+      });
 
-      document
-        .getElementById("facebook-mobile")
-        .addEventListener("mouseover", () => {
-          document.getElementById("facebook-mobile").src =
-            "icons/social-media/facebook/color.png";
-        });
-      document
-        .getElementById("facebook-mobile")
-        .addEventListener("mouseout", () => {
-          themeChanged();
-        });
+    document
+      .getElementById("facebook-mobile")
+      .addEventListener("mouseover", () => {
+        document.getElementById("facebook-mobile").src =
+          "icons/social-media/facebook/color.png";
+      });
+    document
+      .getElementById("facebook-mobile")
+      .addEventListener("mouseout", () => {
+        themeChanged();
+      });
 
-      document
-        .getElementById("instagram-mobile")
-        .addEventListener("mouseover", () => {
-          document.getElementById("instagram-mobile").src =
-            "icons/social-media/instagram/color.png";
-        });
-      document
-        .getElementById("instagram-mobile")
-        .addEventListener("mouseout", () => {
-          themeChanged();
-        });
+    document
+      .getElementById("instagram-mobile")
+      .addEventListener("mouseover", () => {
+        document.getElementById("instagram-mobile").src =
+          "icons/social-media/instagram/color.png";
+      });
+    document
+      .getElementById("instagram-mobile")
+      .addEventListener("mouseout", () => {
+        themeChanged();
+      });
 
-      document
-        .getElementById("email-mobile")
-        .addEventListener("mouseover", () => {
-          document.getElementById("email-mobile").src =
-            "icons/social-media/email/color.png";
-        });
-      document
-        .getElementById("email-mobile")
-        .addEventListener("mouseout", () => {
-          themeChanged();
-        });
-    </script>
-  </body>
+    document
+      .getElementById("email-mobile")
+      .addEventListener("mouseover", () => {
+        document.getElementById("email-mobile").src =
+          "icons/social-media/email/color.png";
+      });
+    document
+      .getElementById("email-mobile")
+      .addEventListener("mouseout", () => {
+        themeChanged();
+      });
+  </script>
+</body>
+
 </html>

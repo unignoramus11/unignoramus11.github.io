@@ -1,356 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mohit Singh - Education Background</title>
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="icon" type="image/png" href="../favicon.ico" />
-    <style>
-      .dot {
-        height: 4vw;
-        width: 4vw;
-        background-color: #e7295c;
-        border-radius: 50%;
-        display: inline-block;
-        margin: 25px;
-      }
 
-      .small-dot {
-        height: 1vw;
-        width: 1vw;
-        background-color: #6f293c;
-        border-radius: 50%;
-        display: inline-block;
-        margin: 20px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohit Singh - Education Background</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/png" href="../favicon.ico" />
+  <style>
+    .dot {
+      height: 4vw;
+      width: 4vw;
+      background-color: #e7295c;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 25px;
+    }
 
-      .smaller-dot {
-        height: 0.5vw;
-        width: 0.5vw;
-        background-color: #f07394;
-        border-radius: 50%;
-        display: inline-block;
-        margin: 10px;
-      }
+    .small-dot {
+      height: 1vw;
+      width: 1vw;
+      background-color: #6f293c;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 20px;
+    }
 
-      .edu-flex {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        padding-right: 20px;
-      }
+    .smaller-dot {
+      height: 0.5vw;
+      width: 0.5vw;
+      background-color: #f07394;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 10px;
+    }
 
-      .edu-head-flex {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        font-size: x-large;
-      }
+    .edu-flex {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding-right: 20px;
+    }
 
-      .edu-body-flex {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 5px;
-        margin-left: 200px;
-        align-items: center;
-      }
+    .edu-head-flex {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      font-size: x-large;
+    }
 
-      .mobile .edu-flex {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        padding-right: 0px;
-        padding-top: 20px;
-        padding-bottom: 40px;
-      }
+    .edu-body-flex {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 5px;
+      margin-left: 200px;
+      align-items: center;
+    }
 
-      .mobile .edu-head-flex {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        font-size: x-large;
-        padding-bottom: 10px;
-      }
+    .mobile .edu-flex {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding-right: 0px;
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
 
-      .mobile .edu-body-flex {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 0px;
-        margin-left: 0px;
-        align-items: center;
-        padding-top: 10px;
-      }
-    </style>
-  </head>
-  <body class="dark-mode">
-    <header>
-      <h1 id="name" class="desktop topic">Mohit Singh</h1>
-      <nav>
-        <!-- Navbar for mobile = Hamburger menu -->
-        <div class="navbar mobile">
-          <div class="nav-container mobile">
-            <!-- Hamburger menu toggle -->
-            <input
-              class="checkbox mobile"
-              type="checkbox"
-              id="hamburger-menu"
-            />
+    .mobile .edu-head-flex {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      font-size: x-large;
+      padding-bottom: 10px;
+    }
 
-            <div class="hamburger-lines mobile">
-              <span class="line line1 mobile"></span>
-              <span class="line line2 mobile"></span>
-              <span class="line line3 mobile"></span>
-            </div>
+    .mobile .edu-body-flex {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 0px;
+      margin-left: 0px;
+      align-items: center;
+      padding-top: 10px;
+    }
+  </style>
+</head>
 
-            <!-- Hamburger menu items -->
-            <div class="menu-items mobile">
-              <li><a href="../index.html">About Me</a></li>
-              <li>
-                <a href="edu_bg.html" class="active">Education Background</a>
-              </li>
-              <li><a href="achievements.html">Achievements</a></li>
-              <li><a href="skills.html">Skills</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li>
-                <label class="theme-switcher" id="theme-switcher-mobile">
-                  <input type="checkbox" id="switch-mobile" />
-                  <span class="slider round"></span>
-                </label>
-              </li>
-            </div>
+<body class="dark-mode">
+  <header>
+    <h1 id="name" class="desktop topic">Mohit Singh</h1>
+    <nav>
+      <!-- Navbar for mobile = Hamburger menu -->
+      <div class="navbar mobile">
+        <div class="nav-container mobile">
+          <!-- Hamburger menu toggle -->
+          <input class="checkbox mobile" type="checkbox" id="hamburger-menu" />
+
+          <div class="hamburger-lines mobile">
+            <span class="line line1 mobile"></span>
+            <span class="line line2 mobile"></span>
+            <span class="line line3 mobile"></span>
           </div>
 
-          <!-- Section name -->
-          <h1 class="section-name topic">Education Background</h1>
-        </div>
-
-        <!-- Navbar for desktop -->
-        <ul class="desktop internal-links">
-          <li><a href="../index.html">About Me</a></li>
-          <li><a href="edu_bg.html" class="active">Education Background</a></li>
-          <li><a href="achievements.html">Achievements</a></li>
-          <li><a href="skills.html">Skills</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li>
-            <label class="theme-switcher">
-              <input type="checkbox" id="switch-desktop" />
-              <span class="slider round"></span>
-            </label>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <div class="desktop" style="padding: 25px">
-      <div
-        class="small-dot"
-        style="animation: 0.3s ease-in-out 0s 1 slideInFromLeft"
-      ></div>
-      <br />
-      <div class="edu-flex">
-        <div class="edu-head-flex emphasis">
-          <div
-            class="dot"
-            style="animation: 0.4s ease-in-out 0s 1 slideInFromLeft"
-          ></div>
-          <div>
-            International Institute of Information Technology, Hyderabad (IIITH)
-          </div>
-          <div style="color: #e7295c; font-style: italic">2023 - Present</div>
-        </div>
-        <div class="edu-body-flex">
-          <div
-            class="smaller-dot"
-            style="animation: 0.5s ease-in-out 0s 1 slideInFromLeft"
-          ></div>
-          <div>
-            Degree: Bachelor of Technology (B. Tech) + Master of Science (MS) by
-            Research
+          <!-- Hamburger menu items -->
+          <div class="menu-items mobile">
+            <li><a href="../index.html">About Me</a></li>
+            <li>
+              <a href="edu_bg.html" class="active">Education Background</a>
+            </li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li>
+              <label class="theme-switcher" id="theme-switcher-mobile">
+                <input type="checkbox" id="switch-mobile" />
+                <span class="slider round"></span>
+              </label>
+            </li>
           </div>
         </div>
-        <div class="edu-body-flex">
-          <div
-            class="smaller-dot"
-            style="animation: 0.6s ease-in-out 0s 1 slideInFromLeft"
-          ></div>
-          <div>Field of Study: Computer Science and Engineering</div>
+
+        <!-- Section name -->
+        <h1 class="section-name topic">Education Background</h1>
+      </div>
+
+      <!-- Navbar for desktop -->
+      <ul class="desktop internal-links">
+        <li><a href="../index.html">About Me</a></li>
+        <li><a href="edu_bg.html" class="active">Education Background</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li>
+          <label class="theme-switcher">
+            <input type="checkbox" id="switch-desktop" />
+            <span class="slider round"></span>
+          </label>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="desktop" style="padding: 25px">
+    <div class="small-dot" style="animation: 0.3s ease-in-out 0s 1 slideInFromLeft"></div>
+    <br />
+    <div class="edu-flex">
+      <div class="edu-head-flex emphasis">
+        <div class="dot" style="animation: 0.4s ease-in-out 0s 1 slideInFromLeft"></div>
+        <div>
+          International Institute of Information Technology, Hyderabad (IIITH)
         </div>
-        <div class="edu-body-flex">
-          <div
-            class="smaller-dot"
-            style="animation: 0.7s ease-in-out 0s 1 slideInFromLeft"
-          ></div>
-          <div>Grade(s): SGPA (1st Semester) – 10.0/10.0</div>
+        <div style="color: #e7295c; font-style: italic">2023 - Present</div>
+      </div>
+      <div class="edu-body-flex">
+        <div class="smaller-dot" style="animation: 0.5s ease-in-out 0s 1 slideInFromLeft"></div>
+        <div>
+          Degree: Bachelor of Technology (B. Tech) + Master of Science (MS) by
+          Research
         </div>
       </div>
-      <br />
-      <div
-        class="small-dot"
-        style="animation: 0.8s ease-in-out 0s 1 slideInFromLeft"
-      ></div>
-      <br />
-      <div
-        class="small-dot"
-        style="animation: 0.9s ease-in-out 0s 1 slideInFromLeft"
-      ></div>
-      <br />
-      <div
-        class="small-dot"
-        style="animation: 1s ease-in-out 0s 1 slideInFromLeft"
-      ></div>
-      <br />
-      <div class="edu-flex">
-        <div class="edu-head-flex emphasis">
-          <div
-            class="dot"
-            style="animation: 1.1s ease-in-out 0s 1 slideInFromLeft"
-          ></div>
-          <div>Delhi Public School, Patna (DPS, Patna)</div>
-          <div style="color: #e7295c; font-style: italic">2011 - 2023</div>
-        </div>
-        <div class="edu-body-flex">
-          <div
-            class="smaller-dot"
-            style="animation: 1.2s ease-in-out 0s 1 slideInFromLeft"
-          ></div>
-          <div>Classes: 1–12th</div>
-        </div>
-        <div class="edu-body-flex">
-          <div
-            class="smaller-dot"
-            style="animation: 1.3s ease-in-out 0s 1 slideInFromLeft"
-          ></div>
-          <div>
-            Field of Study: Physics, Chemistry, Mathematics and English with
-            Computer Science
-          </div>
-        </div>
-        <div class="edu-body-flex">
-          <div
-            class="smaller-dot"
-            style="animation: 1.4s ease-in-out 0s 1 slideInFromLeft"
-          ></div>
-          <div>
-            Grade(s): Class 10 (AISSE - CBSE): 98.3%, Class 12 (AISSCE - CBSE):
-            99.2%
-          </div>
-        </div>
-        <div
-          class="small-dot"
-          style="animation: 1.5s ease-in-out 0s 1 slideInFromLeft"
-        ></div>
-        <br />
+      <div class="edu-body-flex">
+        <div class="smaller-dot" style="animation: 0.6s ease-in-out 0s 1 slideInFromLeft"></div>
+        <div>Field of Study: Computer Science and Engineering</div>
+      </div>
+      <div class="edu-body-flex">
+        <div class="smaller-dot" style="animation: 0.7s ease-in-out 0s 1 slideInFromLeft"></div>
+        <div>Grade(s): SGPA (1st Semester) – 10.0/10.0</div>
       </div>
     </div>
-
-    <div class="mobile" style="padding: 25px">
-      <div class="edu-flex">
-        <div
-          class="edu-head-flex emphasis"
-          style="animation: 0.3s ease-in-out 0s 1 slideInFromLeft"
-        >
-          <div>
-            International Institute of Information Technology, Hyderabad (IIITH)
-          </div>
+    <br />
+    <div class="small-dot" style="animation: 0.8s ease-in-out 0s 1 slideInFromLeft"></div>
+    <br />
+    <div class="small-dot" style="animation: 0.9s ease-in-out 0s 1 slideInFromLeft"></div>
+    <br />
+    <div class="small-dot" style="animation: 1s ease-in-out 0s 1 slideInFromLeft"></div>
+    <br />
+    <div class="edu-flex">
+      <div class="edu-head-flex emphasis">
+        <div class="dot" style="animation: 1.1s ease-in-out 0s 1 slideInFromLeft"></div>
+        <div>Delhi Public School, Patna (DPS, Patna)</div>
+        <div style="color: #e7295c; font-style: italic">2011 - 2023</div>
+      </div>
+      <div class="edu-body-flex">
+        <div class="smaller-dot" style="animation: 1.2s ease-in-out 0s 1 slideInFromLeft"></div>
+        <div>Classes: 1–12th</div>
+      </div>
+      <div class="edu-body-flex">
+        <div class="smaller-dot" style="animation: 1.3s ease-in-out 0s 1 slideInFromLeft"></div>
+        <div>
+          Field of Study: Physics, Chemistry, Mathematics and English with
+          Computer Science
         </div>
-        <div
-          class="emphasis"
-          style="
+      </div>
+      <div class="edu-body-flex">
+        <div class="smaller-dot" style="animation: 1.4s ease-in-out 0s 1 slideInFromLeft"></div>
+        <div>
+          Grade(s): Class 10 (AISSE - CBSE): 98.3%, Class 12 (AISSCE - CBSE):
+          99.2%
+        </div>
+      </div>
+      <div class="small-dot" style="animation: 1.5s ease-in-out 0s 1 slideInFromLeft"></div>
+      <br />
+    </div>
+  </div>
+
+  <div class="mobile" style="padding: 25px">
+    <div class="edu-flex">
+      <div class="edu-head-flex emphasis" style="animation: 0.3s ease-in-out 0s 1 slideInFromLeft">
+        <div>
+          International Institute of Information Technology, Hyderabad (IIITH)
+        </div>
+      </div>
+      <div class="emphasis" style="
             color: #e7295c;
             font-style: italic;
             animation: 0.4s ease-in-out 0s 1 slideInFromLeft;
-          "
-        >
-          2023 - Present
-        </div>
-        <ul>
-          <li>
-            <div
-              class="edu-body-flex"
-              style="animation: 0.5s ease-in-out 0s 1 slideInFromLeft"
-            >
-              <div>
-                Degree: Bachelor of Technology (B. Tech) + Master of Science
-                (MS) by Research
-              </div>
-            </div>
-          </li>
-          <li>
-            <div
-              class="edu-body-flex"
-              style="animation: 0.6s ease-in-out 0s 1 slideInFromLeft"
-            >
-              <div>Field of Study: Computer Science and Engineering</div>
-            </div>
-          </li>
-          <li>
-            <div
-              class="edu-body-flex"
-              style="animation: 0.7s ease-in-out 0s 1 slideInFromLeft"
-            >
-              <div>Grade(s): SGPA (1st Semester) – 10.0/10.0</div>
-            </div>
-          </li>
-        </ul>
+          ">
+        2023 - Present
       </div>
+      <ul>
+        <li>
+          <div class="edu-body-flex" style="animation: 0.5s ease-in-out 0s 1 slideInFromLeft">
+            <div>
+              Degree: Bachelor of Technology (B. Tech) + Master of Science
+              (MS) by Research
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="edu-body-flex" style="animation: 0.6s ease-in-out 0s 1 slideInFromLeft">
+            <div>Field of Study: Computer Science and Engineering</div>
+          </div>
+        </li>
+        <li>
+          <div class="edu-body-flex" style="animation: 0.7s ease-in-out 0s 1 slideInFromLeft">
+            <div>Grade(s): SGPA (1st Semester) – 10.0/10.0</div>
+          </div>
+        </li>
+      </ul>
+    </div>
 
-      <div class="edu-flex">
-        <div
-          class="edu-head-flex emphasis"
-          style="animation: 0.8s ease-in-out 0s 1 slideInFromLeft"
-        >
-          <div>Delhi Public School, Patna (DPS, Patna)</div>
-        </div>
-        <div
-          class="emphasis"
-          style="
+    <div class="edu-flex">
+      <div class="edu-head-flex emphasis" style="animation: 0.8s ease-in-out 0s 1 slideInFromLeft">
+        <div>Delhi Public School, Patna (DPS, Patna)</div>
+      </div>
+      <div class="emphasis" style="
             color: #e7295c;
             font-style: italic;
             animation: 0.9s ease-in-out 0s 1 slideInFromLeft;
-          "
-        >
-          2011 - 2023
-        </div>
-        <ul>
-          <li>
-            <div
-              class="edu-body-flex"
-              style="animation: 1s ease-in-out 0s 1 slideInFromLeft"
-            >
-              <div>Classes: 1–12th</div>
-            </div>
-          </li>
-          <li>
-            <div
-              class="edu-body-flex"
-              style="animation: 1.1s ease-in-out 0s 1 slideInFromLeft"
-            >
-              <div>
-                Field of Study: Physics, Chemistry, Mathematics and English with
-                Computer Science
-              </div>
-            </div>
-          </li>
-          <li>
-            <div
-              class="edu-body-flex"
-              style="animation: 1.2s ease-in-out 0s 1 slideInFromLeft"
-            >
-              <div>
-                Grade(s): Class 10 (AISSE - CBSE): 98.3%, Class 12 (AISSCE -
-                CBSE): 99.2%
-              </div>
-            </div>
-          </li>
-        </ul>
+          ">
+        2011 - 2023
       </div>
+      <ul>
+        <li>
+          <div class="edu-body-flex" style="animation: 1s ease-in-out 0s 1 slideInFromLeft">
+            <div>Classes: 1–12th</div>
+          </div>
+        </li>
+        <li>
+          <div class="edu-body-flex" style="animation: 1.1s ease-in-out 0s 1 slideInFromLeft">
+            <div>
+              Field of Study: Physics, Chemistry, Mathematics and English with
+              Computer Science
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="edu-body-flex" style="animation: 1.2s ease-in-out 0s 1 slideInFromLeft">
+            <div>
+              Grade(s): Class 10 (AISSE - CBSE): 98.3%, Class 12 (AISSCE -
+              CBSE): 99.2%
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
+  </div>
 
-    <script src="../theme_script.js"></script>
-  </body>
+  <script src="../theme_script.js"></script>
+</body>
+
 </html>

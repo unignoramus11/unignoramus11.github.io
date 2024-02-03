@@ -1,215 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mohit Singh - Achievements</title>
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="icon" type="image/png" href="../favicon.ico" />
-    <style>
-      .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        height: 100%;
-        width: 100%;
-      }
 
-      .skills-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-        margin-top: 50px;
-        max-width: 1000px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohit Singh - Achievements</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/png" href="../favicon.ico" />
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      height: 100%;
+      width: 100%;
+    }
 
-      .skill-container {
-        padding: 20px;
-        margin: 20px;
-        border-radius: 25px;
-        font-size: 1.2rem;
-        font-weight: 500;
-        transition: all 0.4s ease-in-out;
-        background: #e7295c33;
-      }
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 50px;
+      max-width: 1000px;
+    }
 
-      .skill-container:hover {
-        background: #e7295c66;
-        scale: 1.1;
-      }
-    </style>
-  </head>
-  <body class="dark-mode">
-    <header>
-      <h1 id="name" class="desktop topic">Mohit Singh</h1>
-      <nav>
-        <!-- Navbar for mobile = Hamburger menu -->
-        <div class="navbar mobile">
-          <div class="nav-container mobile">
-            <!-- Hamburger menu toggle -->
-            <input
-              class="checkbox mobile"
-              type="checkbox"
-              id="hamburger-menu"
-            />
+    .skill-container {
+      padding: 20px;
+      margin: 20px;
+      border-radius: 25px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      transition: all 0.4s ease-in-out;
+      background: #e7295c33;
+    }
 
-            <div class="hamburger-lines mobile">
-              <span class="line line1 mobile"></span>
-              <span class="line line2 mobile"></span>
-              <span class="line line3 mobile"></span>
-            </div>
+    .skill-container:hover {
+      background: #e7295c66;
+      scale: 1.1;
+    }
+  </style>
+</head>
 
-            <!-- Hamburger menu items -->
-            <div class="menu-items mobile">
-              <li><a href="../index.html">About Me</a></li>
-              <li><a href="edu_bg.html">Education Background</a></li>
-              <li><a href="achievements.html">Achievements</a></li>
-              <li><a href="skills.html" class="active">Skills</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li>
-                <label class="theme-switcher" id="theme-switcher-mobile">
-                  <input type="checkbox" id="switch-mobile" />
-                  <span class="slider round"></span>
-                </label>
-              </li>
-            </div>
+<body class="dark-mode">
+  <header>
+    <h1 id="name" class="desktop topic">Mohit Singh</h1>
+    <nav>
+      <!-- Navbar for mobile = Hamburger menu -->
+      <div class="navbar mobile">
+        <div class="nav-container mobile">
+          <!-- Hamburger menu toggle -->
+          <input class="checkbox mobile" type="checkbox" id="hamburger-menu" />
+
+          <div class="hamburger-lines mobile">
+            <span class="line line1 mobile"></span>
+            <span class="line line2 mobile"></span>
+            <span class="line line3 mobile"></span>
           </div>
 
-          <!-- Section name -->
-          <h1 class="section-name topic">Skills</h1>
+          <!-- Hamburger menu items -->
+          <div class="menu-items mobile">
+            <li><a href="../index.html">About Me</a></li>
+            <li><a href="edu_bg.html">Education Background</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="skills.html" class="active">Skills</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li>
+              <label class="theme-switcher" id="theme-switcher-mobile">
+                <input type="checkbox" id="switch-mobile" />
+                <span class="slider round"></span>
+              </label>
+            </li>
+          </div>
         </div>
 
-        <!-- Navbar for desktop -->
-        <ul class="desktop internal-links">
-          <li><a href="../index.html">About Me</a></li>
-          <li><a href="edu_bg.html">Education Background</a></li>
-          <li><a href="achievements.html">Achievements</a></li>
-          <li><a href="skills.html" class="active">Skills</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li>
-            <label class="theme-switcher">
-              <input type="checkbox" id="switch-desktop" />
-              <span class="slider round"></span>
-            </label>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <div class="container">
-      <div class="skills-container">
-        <div
-          class="skill-container"
-          style="animation: 0.5s ease-in-out 0s 1 popIn"
-        >
-          Jetpack Compose
-        </div>
-        <div
-          class="skill-container"
-          style="animation: 0.55s ease-in-out 0s 1 popIn"
-        >
-          Kotlin
-        </div>
-        <div
-          class="skill-container"
-          style="animation: 0.6s ease-in-out 0s 1 popIn"
-        >
-          Android Development
-        </div>
-        <div
-          class="skill-container"
-          style="animation: 0.65s ease-in-out 0s 1 popIn"
-        >
-          Java
-        </div>
-        <div
-          class="skill-container"
-          style="animation: 0.7s ease-in-out 0s 1 popIn"
-        >
-          Mobile Application Development
-        </div>
-        <div
-          class="skill-container"
-          style="animation: 0.75s ease-in-out 0s 1 popIn"
-        >
-          Problem Solving
-        </div>
-        <div
-          class="skill-container"
-          style="animation: 0.8s ease-in-out 0s 1 popIn"
-        >
-          Python
-        </div>
-        <div
-          class="skill-container"
-          style="animation: 0.85s ease-in-out 0s 1 popIn"
-        >
-          C
-        </div>
-        <div
-          class="skill-container"
-          style="animation: 0.9s ease-in-out 0s 1 popIn"
-        >
-          C++
-        </div>
-        <div
-          class="skill-container"
-          style="animation: 0.95s ease-in-out 0s 1 popIn"
-        >
-          VB.NET
-        </div>
-        <div
-          class="skill-container"
-          style="animation: 1s ease-in-out 0s 1 popIn"
-        >
-          Electronics and Robotics
-        </div>
-        <div
-          class="skill-container"
-          style="animation: 1.05s ease-in-out 0s 1 popIn"
-        >
-          Django
-        </div>
-        <div
-          class="skill-container"
-          style="animation: 1.1s ease-in-out 0s 1 popIn"
-        >
-          HTML
-        </div>
-        <div
-          class="skill-container"
-          style="animation: 1.15s ease-in-out 0s 1 popIn"
-        >
-          CSS
-        </div>
-        <div
-          class="skill-container"
-          style="animation: 1.2s ease-in-out 0s 1 popIn"
-        >
-          JavaScript
-        </div>
-        <div
-          class="skill-container"
-          style="animation: 1.25s ease-in-out 0s 1 popIn"
-        >
-          Microsoft Office
-        </div>
+        <!-- Section name -->
+        <h1 class="section-name topic">Skills</h1>
       </div>
-      <div>
-        <img
-          src="../icons/skills.png"
-          alt="Skills"
-          style="
+
+      <!-- Navbar for desktop -->
+      <ul class="desktop internal-links">
+        <li><a href="../index.html">About Me</a></li>
+        <li><a href="edu_bg.html">Education Background</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="skills.html" class="active">Skills</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li>
+          <label class="theme-switcher">
+            <input type="checkbox" id="switch-desktop" />
+            <span class="slider round"></span>
+          </label>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="skills-container">
+      <div class="skill-container" style="animation: 0.5s ease-in-out 0s 1 popIn">
+        Jetpack Compose
+      </div>
+      <div class="skill-container" style="animation: 0.55s ease-in-out 0s 1 popIn">
+        Kotlin
+      </div>
+      <div class="skill-container" style="animation: 0.6s ease-in-out 0s 1 popIn">
+        Android Development
+      </div>
+      <div class="skill-container" style="animation: 0.65s ease-in-out 0s 1 popIn">
+        Java
+      </div>
+      <div class="skill-container" style="animation: 0.7s ease-in-out 0s 1 popIn">
+        Mobile Application Development
+      </div>
+      <div class="skill-container" style="animation: 0.75s ease-in-out 0s 1 popIn">
+        Problem Solving
+      </div>
+      <div class="skill-container" style="animation: 0.8s ease-in-out 0s 1 popIn">
+        Python
+      </div>
+      <div class="skill-container" style="animation: 0.85s ease-in-out 0s 1 popIn">
+        C
+      </div>
+      <div class="skill-container" style="animation: 0.9s ease-in-out 0s 1 popIn">
+        C++
+      </div>
+      <div class="skill-container" style="animation: 0.95s ease-in-out 0s 1 popIn">
+        VB.NET
+      </div>
+      <div class="skill-container" style="animation: 1s ease-in-out 0s 1 popIn">
+        Electronics and Robotics
+      </div>
+      <div class="skill-container" style="animation: 1.05s ease-in-out 0s 1 popIn">
+        Django
+      </div>
+      <div class="skill-container" style="animation: 1.1s ease-in-out 0s 1 popIn">
+        HTML
+      </div>
+      <div class="skill-container" style="animation: 1.15s ease-in-out 0s 1 popIn">
+        CSS
+      </div>
+      <div class="skill-container" style="animation: 1.2s ease-in-out 0s 1 popIn">
+        JavaScript
+      </div>
+      <div class="skill-container" style="animation: 1.25s ease-in-out 0s 1 popIn">
+        Microsoft Office
+      </div>
+    </div>
+    <div>
+      <img src="../icons/skills.png" alt="Skills" style="
             height: 50px;
             animation: 0.4s ease-in-out 0s 1 slideInFromBottom;
             padding: 100px;
-          "
-        />
-      </div>
+          " />
     </div>
+  </div>
 
-    <script src="../theme_script.js"></script>
-  </body>
+  <script src="../theme_script.js"></script>
+</body>
+
 </html>
